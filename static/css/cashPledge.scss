@@ -1,0 +1,66 @@
+#cashPledge{
+  padding: 40px;
+  .list1{
+    position: relative;
+    img{
+      width: 100%;
+    }
+    .info{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .infoWrap{
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        margin-top: -39px;
+        .price{
+          font-size: 36px;
+          color: #fdc405;
+          font-weight: bold;
+          margin-bottom: 10px;
+          span{
+            font-size: 18px;
+            font-weight: normal;
+          }
+        }
+        .text{
+          font-size: 16px;
+          color: #333333;
+        }
+      }
+    }
+  }
+  .list2{
+    padding: 30px 60px;
+    .slide{
+      line-height: 50px;
+    }
+    .liLeft{
+      width: 80%;
+      font-size: 16px;
+      color: #333333;
+      .title{
+        margin-right: 30px;
+      }
+      .look{
+        color: #00a6a0;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 12px;
+      }
+    }
+    .liRight{
+      width: 20%;
+      font-size: 16px;
+      color: #999999;
+    }
+  }
+  .pagin{
+    text-align: center;
+    padding: 30px 0;
+  }
+}

@@ -1,0 +1,189 @@
+#personCenter{
+  background-color: #f5f5f5;
+  height: 100%;
+  .personHeader{
+    height: 60px;
+    background-color: #00a6a0;
+    -webkit-box-shadow: 0 1px 15px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 0 1px 15px rgba(51, 51, 51, 0.1);
+    box-shadow: 0 1px 15px rgba(51, 51, 51, 0.1);
+    .wrap{
+      height: 100%;
+    }
+    .h-left{
+      width: 20%;
+      height: 100%;
+      .left-logo{
+        width: 40%;
+        position: relative;
+        top: 15px;
+        margin-right: 15px;
+        img{
+          width: 100%;
+        }
+      }
+      .left-area{
+        line-height: 60px;
+        cursor: pointer;
+        span{
+          font-size: 14px;
+          color: #ffffff;
+          line-height: 30px;
+          display: inline-block;
+          padding: 0 12px;
+          background-color: #1aafaa;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+          i{
+            display: inline-block;
+            background: url("../img/p_icon01.png") no-repeat center;
+            background-size: 100%;
+            width: 12px;
+            height: 14px;
+            position: relative;
+            top: 1px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .h-right{
+      line-height: 60px;
+      ul{
+        li{
+          margin-right: 40px;
+          a{
+            font-weight: lighter;
+            font-size: 18px;
+            color: #ffffff;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            -ms-transition: color 0.3s;
+            -o-transition: color 0.3s;
+            transition: color 0.3s;
+          }
+          a:hover{
+            color: #333333;
+          }
+        }
+        li.sel{
+          a{
+            color: #00a6a0;
+          }
+        }
+      }
+      .loginStatus{
+        cursor: pointer;
+        color: #ffffff;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .icon{
+          margin-right: 10px;
+          width: 25px;
+          height: 24px;
+          background: url("../img/hpIcon03.png") no-repeat center;
+          background-size: 100% auto;
+        }
+        .exit:hover{
+          color: #333333;
+        }
+      }
+    }
+  }
+  .personBottom{
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 35px 0;
+    font-size: 12px;
+    color: #999999;
+    span{
+      display: inline-block;
+    }
+  }
+  .main{
+    background-color: #f5f5f5;
+    margin-top: 40px;
+    .wrap{
+      position: relative;
+      height: 100%;
+    }
+    .left-nav{
+      width: 180px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      min-height: 940px;
+      .nav-head{
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 40px 22px 30px 22px;
+        .head-img{
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          margin: auto;
+          background-color: #dddddd;
+          margin-bottom: 16px;
+        }
+        .head-info{
+          color: #333333;
+          font-size: 14px;
+          text-align: center;
+          span{
+            display: inline-block;
+          }
+        }
+      }
+      .nav-li{
+        width: 100%;
+        padding-bottom: 15px;
+        ul{
+          width: 100%;
+          li{
+            width: 100%;
+            line-height: 60px;
+            a{
+              text-align: center;
+              font-size: 16px;
+              color: #666666;
+              -webkit-transition: all 0.3s;
+              -moz-transition: all 0.3s;
+              -ms-transition: all 0.3s;
+              -o-transition: all 0.3s;
+              transition: all 0.3s;
+            }
+          }
+          li:hover{
+            a{
+              color: #ffffff;
+              background-color: #00a6a0;
+            }
+          }
+          li.sel{
+            a{
+              color: #ffffff;
+              background-color: #00a6a0;
+            }
+          }
+        }
+      }
+    }
+    .right-cont{
+      width: 1000px;
+      background-color: #fff;
+      min-height: 940px;
+    }
+  }
+}

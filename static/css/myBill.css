@@ -1,0 +1,95 @@
+#myBill {
+  padding: 15px 40px; }
+  #myBill .title {
+    line-height: 65px;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 28px; }
+    #myBill .title .dateBtn {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      overflow: hidden;
+      background: url("../img/icon17.png") no-repeat center;
+      background-size: 100% auto;
+      cursor: pointer;
+      line-height: 0;
+      position: relative;
+      top: 6px;
+      left: 20px; }
+      #myBill .title .dateBtn > span {
+        display: inline-block;
+        opacity: 0; }
+    #myBill .title .time {
+      font-size: 14px;
+      color: #666666; }
+  #myBill .listWrap ul li {
+    padding: 25px 32px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+    #myBill .listWrap ul li .list-left {
+      width: 75%;
+      position: relative; }
+      #myBill .listWrap ul li .list-left .left_icon {
+        width: 40px;
+        height: 40px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px; }
+        #myBill .listWrap ul li .list-left .left_icon img {
+          width: 100%; }
+      #myBill .listWrap ul li .list-left .left_info {
+        width: 82%;
+        font-size: 16px;
+        color: #666666;
+        margin-left: 80px; }
+        #myBill .listWrap ul li .list-left .left_info .info_title {
+          margin-bottom: 10px; }
+    #myBill .listWrap ul li .list-right {
+      width: 25%;
+      text-align: right; }
+      #myBill .listWrap ul li .list-right .right_1 {
+        font-size: 24px;
+        color: #666666;
+        margin-bottom: 14px;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s; }
+        #myBill .listWrap ul li .list-right .right_1 .p1 {
+          color: #d10101; }
+      #myBill .listWrap ul li .list-right .right_2 {
+        color: #00a6a0;
+        font-size: 14px; }
+  #myBill .listWrap ul li.shou:hover {
+    border: 1px solid #fdc405; }
+    #myBill .listWrap ul li.shou:hover .list-right .right_1 {
+      color: #fdc405; }
+  #myBill .listWrap ul li.zhi:hover {
+    border: 1px solid #00a6a0; }
+    #myBill .listWrap ul li.zhi:hover .list-right .right_1 {
+      color: #00a6a0; }
+  #myBill .pagin {
+    text-align: center;
+    padding: 30px 0; }
+  #myBill .l2-3 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #999999; }
+
+/*# sourceMappingURL=myBill.css.map */

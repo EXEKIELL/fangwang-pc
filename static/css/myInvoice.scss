@@ -1,0 +1,250 @@
+#myInvoice{
+  padding: 48px 40px;
+  .tab{
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 26px;
+    span{
+      font-size: 16px;
+      color: #666666;
+      padding: 8px 25px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    span:hover{
+      color: #ffffff;
+      background-color: #00a6a0;
+    }
+    span.sel{
+      color: #ffffff;
+      background-color: #00a6a0;
+    }
+  }
+  .apply_1{
+    padding-bottom: 10px;
+    border-bottom: 6px solid #f5f5f5;
+  }
+  .dianzi{
+    margin-top: 30px;
+  }
+  .apply_3{
+    width: 60%;
+    text-align: center;
+    button{
+      padding: 10px 50px;
+      font-size: 16px;
+      color: #333333;
+      border: 1px solid #dcdcdc;
+      background-color: #f5f5f5;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    button:hover{
+      background-color: #00a6a0;
+      color: #ffffff;
+    }
+  }
+  .tishi{
+    font-size: 14px;
+    color: #fdc405;
+    padding: 20px 0;
+    p{
+      width: 90%;
+      text-align: justify;
+      line-height: 25px;
+    }
+  }
+  .tishi1{
+    text-indent: 2em;
+  }
+  .inputWrap{
+    line-height: 36px;
+    margin-bottom: 25px;
+    >span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .label{
+      font-size: 16px;
+      color: #666666;
+      min-width: 10%;
+    }
+    .input{
+      border: 1px solid #d2d2d2;
+      width: 350px;
+      position: relative;
+      input{
+        margin-left: 15px;
+        width: 90%;
+        border: 0;
+        background: transparent;
+        font-size: 16px;
+        color: #333333;
+        position: relative;
+        z-index: 100;
+      }
+    }
+    .radio{
+      margin-right: 20px;
+      cursor: pointer;
+      span{
+        display: inline-block;
+        line-height: 0;
+      }
+      label{
+        cursor: pointer;
+      }
+      .radioBox{
+        width: 14px;
+        height: 14px;
+        border: 1px solid #bfbfbf;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        position: relative;
+        top: 2px;
+        margin-right: 10px;
+        input[type='radio']{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 50;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+    }
+    .radio.sel{
+      .radioBox{
+        background: url("../img/loginIcon03.png") no-repeat center;
+        background-size: 100% auto;
+      }
+    }
+    .el-select{
+      width: 100%;
+    }
+    .placeholder{
+      position: absolute;
+      left: 15px;
+      font-size: 16px;
+      color: #999999;
+    }
+  }
+  .upload{
+    width: 100%;
+    .u_1{
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 15px;
+      span{
+        color: #999999;
+      }
+    }
+    .u_2{
+      .u_list{
+        float: left;
+        width: 162px;
+        margin-right: 17px;
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+        .u_wrap{
+          width: 100%;
+          height: 120px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          border: 2px dashed #e5e5e5;
+          overflow: hidden;
+          .el_span{
+            position: absolute;
+            top: 26%;
+            left: 0;
+            width: 100%;
+            font-size: 14px;
+            color: #cccccc;
+          }
+        }
+        .u_text{
+          padding: 16px;
+        }
+      }
+    }
+  }
+  .record{
+    .recordTitle{
+      margin-bottom: 26px;
+      >span{
+        font-size: 16px;
+        color: #333333;
+        span{
+          font-size: 14px;
+          color: #666666;
+          font-weight: lighter;
+        }
+      }
+    }
+    .recordList{
+      .list{
+        padding: 15px 18px;
+        .bianhao{
+          margin-bottom: 14px;
+          font-size: 14px;
+          color: #999999;
+        }
+        .info{
+          font-size: 16px;
+          color: #333333;
+          >div{
+            float: left;
+          }
+          .list_1{
+            width: 40%;
+          }
+          .list_2{
+            width: 35%;
+            >span{
+              span{
+                font-size: 14px;
+                color: #333333;
+              }
+            }
+          }
+          .list_3{
+            width: 25%;
+            font-size: 14px;
+            text-align: right;
+            .status{
+              color: #00a6a0;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+      .list:nth-child(2n+1){
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  .pagin{
+    text-align: center;
+    padding: 30px 0;
+  }
+  .l2-3{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #999999;
+  }
+}

@@ -1,0 +1,119 @@
+#indexWrap {
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f9f9f9; }
+  #indexWrap .header {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 10px rgba(2, 2, 2, 0.1);
+    -moz-box-shadow: 0 1px 10px rgba(2, 2, 2, 0.1);
+    box-shadow: 0 1px 10px rgba(2, 2, 2, 0.1);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0; }
+    #indexWrap .header .headerWrap {
+      width: 1200px;
+      height: 100%;
+      margin: auto;
+      vertical-align: middle;
+      position: relative; }
+      #indexWrap .header .headerWrap .hw-1 {
+        width: 7%;
+        height: 30px;
+        position: relative;
+        top: 50%;
+        margin-top: -15px;
+        margin-right: 140px; }
+        #indexWrap .header .headerWrap .hw-1 img {
+          width: 100%; }
+      #indexWrap .header .headerWrap .hw-2 {
+        width: 530px;
+        position: relative;
+        top: 50%;
+        margin-top: -21px; }
+        #indexWrap .header .headerWrap .hw-2 .search {
+          width: 420px;
+          margin-right: 10px;
+          border: 1px solid #d2d2d2;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          line-height: 40px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+          #indexWrap .header .headerWrap .hw-2 .search input {
+            width: 90%;
+            margin-left: 38px;
+            border: 0;
+            background-color: transparent;
+            font-size: 16px;
+            color: #333333; }
+          #indexWrap .header .headerWrap .hw-2 .search .icon {
+            display: inline-block;
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            background: url("../img/search01.png") no-repeat center;
+            background-size: 50% auto; }
+        #indexWrap .header .headerWrap .hw-2 .search:hover {
+          border: 1px solid #00a6a0; }
+        #indexWrap .header .headerWrap .hw-2 .search.focus {
+          border: 1px solid #00a6a0; }
+        #indexWrap .header .headerWrap .hw-2 .searchBtn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100px;
+          height: 100%; }
+          #indexWrap .header .headerWrap .hw-2 .searchBtn button {
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #00a6a0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+      #indexWrap .header .headerWrap .hw-3 {
+        font-size: 16px;
+        color: #333333;
+        position: relative;
+        top: 50%;
+        margin-top: -10.5px; }
+        #indexWrap .header .headerWrap .hw-3 span {
+          margin-right: 20px;
+          cursor: pointer;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+        #indexWrap .header .headerWrap .hw-3 span:hover {
+          color: #00a6a0; }
+        #indexWrap .header .headerWrap .hw-3 .fabu {
+          color: #00a6a0;
+          border: 1px solid #00a6a0;
+          padding: 10px 20px;
+          margin-right: 0;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px; }
+  #indexWrap .main {
+    margin-top: 100px; }
+
+/*# sourceMappingURL=indexWrap.css.map */

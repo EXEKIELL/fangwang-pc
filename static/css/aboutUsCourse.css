@@ -1,0 +1,83 @@
+#aboutUsCourse .wrap {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s; }
+#aboutUsCourse .content {
+  padding-bottom: 80px; }
+  #aboutUsCourse .content ul li {
+    text-align: center;
+    padding: 35px 0;
+    border-bottom: 1px solid #eeeeee;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #fff; }
+    #aboutUsCourse .content ul li .cont-1 {
+      margin-right: 75px; }
+      #aboutUsCourse .content ul li .cont-1 .c1_1 {
+        font-size: 40px;
+        color: #333333;
+        margin-bottom: 5px;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s; }
+      #aboutUsCourse .content ul li .cont-1 .c1_2 {
+        font-size: 16px;
+        color: #888888;
+        text-align: right;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s; }
+    #aboutUsCourse .content ul li .cont-2 {
+      text-align: left; }
+      #aboutUsCourse .content ul li .cont-2 .c2_1 {
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 15px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #aboutUsCourse .content ul li .cont-2 .c2_2 {
+        width: 80%; }
+        #aboutUsCourse .content ul li .cont-2 .c2_2 p {
+          line-height: 30px;
+          text-align: justify;
+          font-size: 16px;
+          color: #888888;
+          -webkit-transition: color 0.3s;
+          -moz-transition: color 0.3s;
+          -ms-transition: color 0.3s;
+          -o-transition: color 0.3s;
+          transition: color 0.3s; }
+  #aboutUsCourse .content ul li:hover {
+    background-color: #00a6a0;
+    -webkit-box-shadow: 0 0 20px rgba(0, 166, 160, 0.5);
+    -moz-box-shadow: 0 0 20px rgba(0, 166, 160, 0.5);
+    box-shadow: 0 0 20px rgba(0, 166, 160, 0.5);
+    color: #ffffff; }
+    #aboutUsCourse .content ul li:hover .wrap {
+      left: -50px; }
+    #aboutUsCourse .content ul li:hover .cont-1 .c1_1 {
+      color: #ffffff; }
+    #aboutUsCourse .content ul li:hover .cont-1 .c1_2 {
+      color: rgba(255, 255, 255, 0.7); }
+    #aboutUsCourse .content ul li:hover .cont-2 .c2_1 {
+      color: #ffffff;
+      font-weight: bold; }
+    #aboutUsCourse .content ul li:hover .cont-2 .c2_2 p {
+      color: #ffffff; }
+
+/*# sourceMappingURL=aboutUsCourse.css.map */

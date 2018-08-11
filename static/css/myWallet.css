@@ -1,0 +1,119 @@
+#myWallet {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 35px 40px; }
+  #myWallet .list1 {
+    margin-bottom: 60px; }
+    #myWallet .list1 .l1_1 {
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 25px; }
+    #myWallet .list1 .l1_2 {
+      font-size: 48px;
+      color: #00a6a0;
+      font-weight: bold;
+      margin-bottom: 25px; }
+      #myWallet .list1 .l1_2 .small {
+        font-size: 30px; }
+    #myWallet .list1 .l1_3 button {
+      font-size: 20px;
+      color: #00a6a0;
+      line-height: 40px;
+      padding: 0 35px;
+      background-color: transparent;
+      border: 1px solid #00a6a0;
+      -webkit-border-radius: 40px;
+      -moz-border-radius: 40px;
+      border-radius: 40px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    #myWallet .list1 .l1_3 button:hover {
+      background-color: #00a6a0;
+      color: #ffffff; }
+  #myWallet .list2 .l2_1 {
+    padding: 20px 0;
+    border-bottom: 1px solid #dcdcdc; }
+    #myWallet .list2 .l2_1 span {
+      display: inline-block;
+      vertical-align: middle;
+      color: #666666;
+      font-size: 16px;
+      position: relative;
+      padding: 0 30px;
+      cursor: pointer; }
+    #myWallet .list2 .l2_1 span:after {
+      content: '';
+      display: block;
+      border-right: 1px solid #dcdcdc;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0; }
+    #myWallet .list2 .l2_1 span:last-child:after {
+      display: block; }
+    #myWallet .list2 .l2_1 span:hover {
+      color: #00a6a0;
+      font-weight: bold; }
+    #myWallet .list2 .l2_1 span.sel {
+      color: #00a6a0;
+      font-weight: bold; }
+  #myWallet .list2 .l2_2 ul {
+    width: 100%;
+    position: relative; }
+    #myWallet .list2 .l2_2 ul li {
+      margin: 0 20px;
+      padding: 15px 0;
+      border-bottom: 1px dashed #e5e5e5;
+      position: relative; }
+      #myWallet .list2 .l2_2 ul li .li-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        vertical-align: middle;
+        padding: 26px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+      #myWallet .list2 .l2_2 ul li .title {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 10px; }
+      #myWallet .list2 .l2_2 ul li .time {
+        font-size: 12px;
+        color: #999999; }
+      #myWallet .list2 .l2_2 ul li .add {
+        font-size: 18px;
+        color: #00a6a0; }
+      #myWallet .list2 .l2_2 ul li .minus {
+        font-size: 18px;
+        color: #fdc405; }
+  #myWallet .list2 .l2_2 .ulWrap {
+    position: relative; }
+  #myWallet .list2 .l2_2 .ulWrap:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff; }
+  #myWallet .list2 .pagin {
+    text-align: center;
+    padding: 30px 0; }
+  #myWallet .list2 .l2-3 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #999999; }
+
+/*# sourceMappingURL=myWallet.css.map */

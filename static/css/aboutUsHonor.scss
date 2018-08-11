@@ -1,0 +1,101 @@
+#aboutUsHonor{
+  .wrap{
+    width: 1200px;
+    margin: auto;
+  }
+  .content{
+    .list{
+      width: 380px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      .list_1{
+        border: 1px solid #eeeeee;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        img{
+          width: 100%;
+          -webkit-transform: scale(0.88);
+          -moz-transform: scale(0.88);
+          -ms-transform: scale(0.88);
+          -o-transform: scale(0.88);
+          transform: scale(0.88);
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+        }
+      }
+      .list_2{
+        position: relative;
+        >div{
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 90%;
+          margin: auto;
+          padding: 25px 0;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          .l2_1{
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 10px;
+          }
+          .l2_2{
+            font-size: 16px;
+            color: #333333;
+          }
+        }
+      }
+      .list_2:before{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background-color: #00a6a0;
+        width: 0;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+    }
+    .list:hover{
+      .list_1{
+        img{
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      .list_2{
+        >div{
+          width: 100%;
+          .l2_1{
+            color: #00a6a0;
+            font-weight: bold;
+          }
+          .l2_2{
+            color: #00a6a0;
+          }
+        }
+      }
+      .list_2:before{
+        width: 100%;
+      }
+    }
+    .list:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+}

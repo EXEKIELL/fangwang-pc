@@ -1,0 +1,176 @@
+#personAppointment{
+  padding: 48px 40px;
+  .tab{
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 26px;
+    span{
+      font-size: 16px;
+      color: #666666;
+      padding: 12px 44px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    span:hover{
+      color: #ffffff;
+      background-color: #00a6a0;
+    }
+    span.sel{
+      color: #ffffff;
+      background-color: #00a6a0;
+    }
+  }
+  .listWrap{
+    ul{
+      li{
+        border: 1px solid #e5e5e5;
+        padding: 25px 25px;
+        margin-bottom: 20px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        .list-left{
+          width: 18%;
+          margin-right: 15px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 12px 0;
+          .left-img{
+            width: 60px;
+            height: 60px;
+            margin: auto;
+            overflow: hidden;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border: 1px solid #efefef;
+            margin-bottom: 18px;
+            img{
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+          .left-name{
+            text-align: center;
+            width: 95%;
+            font-size: 16px;
+            color: #666666;
+            margin: auto;
+          }
+        }
+        .list-right{
+          width: 80%;
+          position: relative;
+          .right_1{
+            font-size: 16px;
+            color: #666666;
+            width: 75%;
+            >div{
+              line-height: 40px;
+              span{
+                display: inline-block;
+                vertical-align: middle;
+              }
+              .icon{
+                width: 20px;
+                height: 20px;
+                margin-right: 14px;
+              }
+              .text{
+                width: 92%;
+              }
+            }
+            >div:last-child{
+              margin-bottom: 0;
+            }
+            .r1_1{
+              .icon{
+                background: url("../img/icon05.png") no-repeat center;
+                background-size: 80% auto;
+              }
+            }
+            .r1_2{
+              .icon{
+                background: url("../img/icon06.png") no-repeat center;
+                background-size: 80% auto;
+              }
+            }
+            .r1_3{
+              span{
+                color: #00a6a0;
+              }
+              .icon{
+                background: url("../img/icon07.png") no-repeat center;
+                background-size: 80% auto;
+              }
+            }
+          }
+          .right_2{
+            position: absolute;
+            width: 25%;
+            bottom: 0;
+            right: 0;
+            button{
+              padding: 6px 10px;
+              -webkit-border-radius: 3px;
+              -moz-border-radius: 3px;
+              border-radius: 3px;
+              font-size: 14px;
+              background-color: transparent;
+            }
+            .r2_1{
+              color: #00a6a0;
+              border: 1px solid #00a6a0;
+              -webkit-transition: all 0.3s;
+              -moz-transition: all 0.3s;
+              -ms-transition: all 0.3s;
+              -o-transition: all 0.3s;
+              transition: all 0.3s;
+            }
+            .r2_2{
+              color: #999999;
+              border: 1px solid #999999;
+              -webkit-transition: all 0.3s;
+              -moz-transition: all 0.3s;
+              -ms-transition: all 0.3s;
+              -o-transition: all 0.3s;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+      li:hover{
+        border: 1px solid #ffffff;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -o-transform: scale(1.01);
+        transform: scale(1.01);
+        background-color: #fff;
+        .list-right{
+          .right_2{
+            .r2_1{
+              background-color: #00a6a0;
+              color: #ffffff;
+            }
+            .r2_2{
+              color: #ffffff;
+              background-color: #999999;
+            }
+          }
+        }
+      }
+    }
+  }
+}

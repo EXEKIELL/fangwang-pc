@@ -1,0 +1,11 @@
+#aboutUsBrief .content {
+  width: 1200px;
+  margin: auto;
+  margin-bottom: 80px; }
+  #aboutUsBrief .content p {
+    text-align: justify;
+    line-height: 45px;
+    font-size: 16px;
+    color: #333333; }
+
+/*# sourceMappingURL=aboutUsBrief.css.map */

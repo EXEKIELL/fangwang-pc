@@ -1,0 +1,139 @@
+#productCenter{
+  .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+  }
+  .p-header{
+    height: 60px;
+    width: 100%;
+    background-color: #00a6a0;
+    color: #ffffff;
+    position: relative;
+    .h_1{
+      width: 20%;
+      height: 100%;
+      .area{
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        line-height: 30px;
+        padding: 0 12px;
+        background-color: rgba(0,0,0,0.1);
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .icon{
+          width: 12px;
+          height: 14px;
+          background: url("../img/p_icon01.png") no-repeat center;
+          background-size: 100% auto;
+          margin-right: 5px;
+        }
+      }
+    }
+    .h_2{
+      width: 80%;
+      height: 100%;
+      ul{
+        height: 100%;
+        li{
+          padding: 18px 0;
+          margin-right: 40px;
+          span{
+            font-size: 18px;
+            color: #ffffff;
+            position: relative;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            cursor: pointer;
+          }
+          span:before{
+            content: '';
+            display: block;
+            position: absolute;
+            border-bottom: 1px solid #ffffff;
+            width: 0%;
+            bottom: -5px;
+            left: 50%;
+            -webkit-transition: width 0.3s;
+            -moz-transition: width 0.3s;
+            -ms-transition: width 0.3s;
+            -o-transition: width 0.3s;
+            transition: width 0.3s;
+          }
+          span:after{
+            content: '';
+            display: block;
+            position: absolute;
+            border-bottom: 1px solid #ffffff;
+            width: 0%;
+            bottom: -5px;
+            right: 50%;
+            -webkit-transition: width 0.3s;
+            -moz-transition: width 0.3s;
+            -ms-transition: width 0.3s;
+            -o-transition: width 0.3s;
+            transition: width 0.3s;
+          }
+          span:hover{
+            font-weight: bold;
+          }
+          span:hover:after{
+            width: 50%;
+          }
+          span:hover:before{
+            width: 50%;
+          }
+        }
+        li.sel{
+          span{
+            font-weight: bold;
+          }
+          span:after{
+            width: 50%;
+          }
+          span:before{
+            width: 50%;
+          }
+        }
+      }
+      .h2_login{
+        line-height: 59px;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 5px;
+          cursor: pointer;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          font-size: 16px;
+          i{
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            margin-right: 10px;
+            background: url("../img/hpIcon03.png") no-repeat center;
+            background-size: 100% auto;
+            vertical-align: middle;
+            margin-top: -5px;
+          }
+        }
+        .login:hover,.register:hover{
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

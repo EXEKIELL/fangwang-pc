@@ -1,0 +1,85 @@
+#aboutUs .banner {
+  position: relative; }
+  #aboutUs .banner img {
+    width: 100%; }
+  #aboutUs .banner .detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); }
+    #aboutUs .banner .detail .detailWrap {
+      width: 100%;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      margin-top: -114px; }
+      #aboutUs .banner .detail .detailWrap .d_1 {
+        font-size: 18px;
+        color: #ffffff;
+        margin-bottom: 30px; }
+      #aboutUs .banner .detail .detailWrap .d_2 {
+        font-size: 70px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 30px; }
+        #aboutUs .banner .detail .detailWrap .d_2 span {
+          color: #00a6a0; }
+      #aboutUs .banner .detail .detailWrap .d_3 {
+        font-size: 40px;
+        color: #00a6a0; }
+  #aboutUs .banner .aboutUsNav {
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -20%;
+    left: 10%;
+    -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.1); }
+    #aboutUs .banner .aboutUsNav ul {
+      padding: 20px; }
+      #aboutUs .banner .aboutUsNav ul li {
+        border-bottom: 1px solid #eeeeee;
+        line-height: 40px;
+        padding: 0 30px; }
+        #aboutUs .banner .aboutUsNav ul li a {
+          font-size: 16px;
+          color: #333333; }
+        #aboutUs .banner .aboutUsNav ul li a:hover {
+          color: #00a6a0;
+          position: relative; }
+        #aboutUs .banner .aboutUsNav ul li a:hover:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          margin-top: -2.5%;
+          left: -15px;
+          width: 5px;
+          height: 5px;
+          background-color: #00a6a0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%; }
+      #aboutUs .banner .aboutUsNav ul li.sel a {
+        color: #00a6a0;
+        position: relative; }
+      #aboutUs .banner .aboutUsNav ul li.sel a:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -2.5%;
+        left: -15px;
+        width: 5px;
+        height: 5px;
+        background-color: #00a6a0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+
+/*# sourceMappingURL=aboutUs.css.map */

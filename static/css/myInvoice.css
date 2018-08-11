@@ -1,0 +1,194 @@
+#myInvoice {
+  padding: 48px 40px; }
+  #myInvoice .tab {
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 26px; }
+    #myInvoice .tab span {
+      font-size: 16px;
+      color: #666666;
+      padding: 8px 25px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    #myInvoice .tab span:hover {
+      color: #ffffff;
+      background-color: #00a6a0; }
+    #myInvoice .tab span.sel {
+      color: #ffffff;
+      background-color: #00a6a0; }
+  #myInvoice .apply_1 {
+    padding-bottom: 10px;
+    border-bottom: 6px solid #f5f5f5; }
+  #myInvoice .dianzi {
+    margin-top: 30px; }
+  #myInvoice .apply_3 {
+    width: 60%;
+    text-align: center; }
+    #myInvoice .apply_3 button {
+      padding: 10px 50px;
+      font-size: 16px;
+      color: #333333;
+      border: 1px solid #dcdcdc;
+      background-color: #f5f5f5;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    #myInvoice .apply_3 button:hover {
+      background-color: #00a6a0;
+      color: #ffffff; }
+  #myInvoice .tishi {
+    font-size: 14px;
+    color: #fdc405;
+    padding: 20px 0; }
+    #myInvoice .tishi p {
+      width: 90%;
+      text-align: justify;
+      line-height: 25px; }
+  #myInvoice .tishi1 {
+    text-indent: 2em; }
+  #myInvoice .inputWrap {
+    line-height: 36px;
+    margin-bottom: 25px; }
+    #myInvoice .inputWrap > span {
+      display: inline-block;
+      vertical-align: middle; }
+    #myInvoice .inputWrap .label {
+      font-size: 16px;
+      color: #666666;
+      min-width: 10%; }
+    #myInvoice .inputWrap .input {
+      border: 1px solid #d2d2d2;
+      width: 350px;
+      position: relative; }
+      #myInvoice .inputWrap .input input {
+        margin-left: 15px;
+        width: 90%;
+        border: 0;
+        background: transparent;
+        font-size: 16px;
+        color: #333333;
+        position: relative;
+        z-index: 100; }
+    #myInvoice .inputWrap .radio {
+      margin-right: 20px;
+      cursor: pointer; }
+      #myInvoice .inputWrap .radio span {
+        display: inline-block;
+        line-height: 0; }
+      #myInvoice .inputWrap .radio label {
+        cursor: pointer; }
+      #myInvoice .inputWrap .radio .radioBox {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #bfbfbf;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        position: relative;
+        top: 2px;
+        margin-right: 10px; }
+        #myInvoice .inputWrap .radio .radioBox input[type='radio'] {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 50;
+          opacity: 0;
+          cursor: pointer; }
+    #myInvoice .inputWrap .radio.sel .radioBox {
+      background: url("../img/loginIcon03.png") no-repeat center;
+      background-size: 100% auto; }
+    #myInvoice .inputWrap .el-select {
+      width: 100%; }
+    #myInvoice .inputWrap .placeholder {
+      position: absolute;
+      left: 15px;
+      font-size: 16px;
+      color: #999999; }
+  #myInvoice .upload {
+    width: 100%; }
+    #myInvoice .upload .u_1 {
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 15px; }
+      #myInvoice .upload .u_1 span {
+        color: #999999; }
+    #myInvoice .upload .u_2 .u_list {
+      float: left;
+      width: 162px;
+      margin-right: 17px;
+      text-align: center;
+      font-size: 14px;
+      color: #666666; }
+      #myInvoice .upload .u_2 .u_list .u_wrap {
+        width: 100%;
+        height: 120px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 2px dashed #e5e5e5;
+        overflow: hidden; }
+        #myInvoice .upload .u_2 .u_list .u_wrap .el_span {
+          position: absolute;
+          top: 26%;
+          left: 0;
+          width: 100%;
+          font-size: 14px;
+          color: #cccccc; }
+      #myInvoice .upload .u_2 .u_list .u_text {
+        padding: 16px; }
+  #myInvoice .record .recordTitle {
+    margin-bottom: 26px; }
+    #myInvoice .record .recordTitle > span {
+      font-size: 16px;
+      color: #333333; }
+      #myInvoice .record .recordTitle > span span {
+        font-size: 14px;
+        color: #666666;
+        font-weight: lighter; }
+  #myInvoice .record .recordList .list {
+    padding: 15px 18px; }
+    #myInvoice .record .recordList .list .bianhao {
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #999999; }
+    #myInvoice .record .recordList .list .info {
+      font-size: 16px;
+      color: #333333; }
+      #myInvoice .record .recordList .list .info > div {
+        float: left; }
+      #myInvoice .record .recordList .list .info .list_1 {
+        width: 40%; }
+      #myInvoice .record .recordList .list .info .list_2 {
+        width: 35%; }
+        #myInvoice .record .recordList .list .info .list_2 > span span {
+          font-size: 14px;
+          color: #333333; }
+      #myInvoice .record .recordList .list .info .list_3 {
+        width: 25%;
+        font-size: 14px;
+        text-align: right; }
+        #myInvoice .record .recordList .list .info .list_3 .status {
+          color: #00a6a0;
+          margin-right: 20px; }
+  #myInvoice .record .recordList .list:nth-child(2n+1) {
+    background-color: #f5f5f5; }
+  #myInvoice .pagin {
+    text-align: center;
+    padding: 30px 0; }
+  #myInvoice .l2-3 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #999999; }
+
+/*# sourceMappingURL=myInvoice.css.map */

@@ -1,0 +1,96 @@
+#mainWrap{
+  .wrap{
+    width: 1200px;
+    margin: auto;
+  }
+  .mainHeader{
+    height: 60px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 15px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 0 1px 15px rgba(51, 51, 51, 0.1);
+    box-shadow: 0 1px 15px rgba(51, 51, 51, 0.1);
+    .wrap{
+      height: 100%;
+    }
+    .h-left{
+      width: 20%;
+      height: 100%;
+      .left-logo{
+        width: 40%;
+        position: relative;
+        top: 15px;
+        margin-right: 15px;
+        img{
+          width: 100%;
+        }
+      }
+      .left-area{
+        line-height: 60px;
+        span{
+          font-size: 14px;
+          color: #00a6a0;
+          line-height: 30px;
+          display: inline-block;
+          padding: 0 12px;
+          background-color: #e5f6f5;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+          i{
+            display: inline-block;
+            background: url("../img/icon01.png") no-repeat center;
+            background-size: 100%;
+            width: 12px;
+            height: 14px;
+            position: relative;
+            top: 1px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .h-right{
+      line-height: 60px;
+      ul{
+        li{
+          margin-right: 40px;
+          a{
+            font-weight: lighter;
+            font-size: 18px;
+            color: #333333;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            -ms-transition: color 0.3s;
+            -o-transition: color 0.3s;
+            transition: color 0.3s;
+          }
+          a:hover{
+            color: #00a6a0;
+          }
+        }
+        li.sel{
+          a{
+            color: #00a6a0;
+          }
+        }
+      }
+      .loginStatus{
+        cursor: pointer;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .icon{
+          margin-right: 10px;
+          width: 25px;
+          height: 24px;
+          background: url("../img/icon02.png") no-repeat center;
+          background-size: 100% auto;
+        }
+        .exit:hover{
+          color: #00a6a0;
+        }
+      }
+    }
+  }
+}

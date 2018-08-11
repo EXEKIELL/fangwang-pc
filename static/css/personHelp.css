@@ -1,0 +1,156 @@
+#personHelp {
+  padding: 48px 40px; }
+  #personHelp .tab {
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 26px; }
+    #personHelp .tab span {
+      font-size: 16px;
+      color: #666666;
+      padding: 12px 44px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    #personHelp .tab span:hover {
+      color: #ffffff;
+      background-color: #00a6a0; }
+    #personHelp .tab span.sel {
+      color: #ffffff;
+      background-color: #00a6a0; }
+  #personHelp .cont {
+    padding: 0 68px; }
+    #personHelp .cont .cont_label {
+      min-width: 10%;
+      text-align: right;
+      line-height: 39px; }
+    #personHelp .cont .cont_info {
+      max-width: 90%; }
+      #personHelp .cont .cont_info .leibie {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 8px 40px;
+        font-size: 16px;
+        color: #666666;
+        border: 1px solid #dcdcdc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        cursor: pointer; }
+      #personHelp .cont .cont_info .leibie:hover {
+        position: relative;
+        border: 1px solid #00a6a0; }
+      #personHelp .cont .cont_info .leibie:hover:after {
+        width: 18px;
+        height: 19px;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url("../img/p_icon06.png") no-repeat center;
+        background-size: 100% auto; }
+      #personHelp .cont .cont_info .leibie.sel {
+        position: relative;
+        border: 1px solid #00a6a0; }
+      #personHelp .cont .cont_info .leibie.sel:after {
+        width: 18px;
+        height: 19px;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url("../img/p_icon06.png") no-repeat center;
+        background-size: 100% auto; }
+      #personHelp .cont .cont_info .textarea {
+        width: 650px;
+        height: 200px;
+        border: 1px solid #bfbfbf;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 25px 30px;
+        position: relative; }
+        #personHelp .cont .cont_info .textarea .desc {
+          width: 100%;
+          height: 100%;
+          resize: none;
+          border: 0;
+          background-color: transparent;
+          position: relative;
+          z-index: 100;
+          font-size: 14px;
+          color: #333333; }
+        #personHelp .cont .cont_info .textarea .placeholder {
+          position: absolute;
+          top: 25px;
+          left: 30px; }
+          #personHelp .cont .cont_info .textarea .placeholder > div {
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: #bbbbbb; }
+    #personHelp .cont .cont_2 {
+      margin-bottom: 35px; }
+    #personHelp .cont .cont_3 {
+      margin-bottom: 25px; }
+      #personHelp .cont .cont_3 .upload {
+        width: 100px;
+        overflow: hidden;
+        position: relative;
+        margin-left: 80px;
+        margin-right: 20px; }
+        #personHelp .cont .cont_3 .upload button {
+          line-height: 32px;
+          width: 100%;
+          height: 100%;
+          font-size: 14px;
+          color: #666666;
+          border: 1px solid #bfbfbf;
+          background-color: #eeeeee; }
+      #personHelp .cont .cont_3 .upLoadName {
+        line-height: 32px;
+        font-size: 16px;
+        color: #666666; }
+    #personHelp .cont .cont_4 {
+      font-size: 16px;
+      color: #333333;
+      margin-bottom: 26px; }
+      #personHelp .cont .cont_4 span {
+        color: #666666; }
+    #personHelp .cont .cont_5 {
+      line-height: 40px;
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 60px; }
+      #personHelp .cont .cont_5 > div {
+        float: left; }
+      #personHelp .cont .cont_5 .f_title {
+        margin-right: 15px; }
+      #personHelp .cont .cont_5 .input {
+        border: 1px solid #dcdcdc;
+        margin-right: 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 10px; }
+        #personHelp .cont .cont_5 .input input {
+          border: 0;
+          background: transparent;
+          font-size: 16px;
+          color: #666666; }
+    #personHelp .cont .cont_6 {
+      width: 100%;
+      text-align: center; }
+      #personHelp .cont .cont_6 button {
+        color: #ffffff;
+        background-color: #00a6a0;
+        padding: 12px 98px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; }
+
+/*# sourceMappingURL=personHelp.css.map */

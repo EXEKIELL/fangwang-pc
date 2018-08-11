@@ -1,0 +1,234 @@
+#personData {
+  padding: 48px 40px; }
+  #personData .basicInfo .info_list {
+    font-size: 16px;
+    color: #333333;
+    line-height: 40px;
+    margin-bottom: 20px; }
+    #personData .basicInfo .info_list input {
+      font-size: 16px;
+      color: #333333;
+      border: 0;
+      background-color: transparent;
+      width: 90%; }
+    #personData .basicInfo .info_list .input {
+      display: inline-block;
+      text-align: center;
+      border: 1px solid #00a6a0;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
+    #personData .basicInfo .info_list .alter, #personData .basicInfo .info_list .save {
+      color: #00a6a0;
+      cursor: pointer;
+      margin: 10px; }
+    #personData .basicInfo .info_list .list_1 {
+      margin-bottom: 10px; }
+    #personData .basicInfo .info_list .tagList {
+      width: 50%; }
+      #personData .basicInfo .info_list .tagList span {
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #dcdcdc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        font-size: 16px;
+        color: #999999;
+        cursor: pointer; }
+      #personData .basicInfo .info_list .tagList span.sel {
+        border: 1px solid #00a6a0;
+        color: #00a6a0;
+        position: relative; }
+      #personData .basicInfo .info_list .tagList span.sel:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        bottom: 0;
+        right: 0;
+        background: url("../img/p_icon06.png") no-repeat center;
+        background-size: 100% auto; }
+    #personData .basicInfo .info_list .verify {
+      font-size: 16px;
+      color: #666666;
+      cursor: pointer; }
+  #personData .uploadHead .upload_1 {
+    margin-bottom: 80px; }
+    #personData .uploadHead .upload_1 button {
+      padding: 10px 20px;
+      background-color: #00a6a0;
+      color: #ffffff; }
+  #personData .uploadHead .upload_2 img {
+    width: 100%;
+    height: 100%; }
+  #personData .uploadHead .upload_2 .u2_1 {
+    width: 280px;
+    height: 280px;
+    margin-right: 42px;
+    overflow: hidden; }
+  #personData .uploadHead .upload_2 .u2_1.bj {
+    background: url("../img/bj02.png") no-repeat center #f5f5f5;
+    background-size: 80% auto; }
+  #personData .uploadHead .upload_2 .u2_2 {
+    width: 475px;
+    height: 240px;
+    background-color: #f5f5f5;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px 20px; }
+    #personData .uploadHead .upload_2 .u2_2 .imgWrap {
+      height: 150px;
+      position: relative; }
+      #personData .uploadHead .upload_2 .u2_2 .imgWrap > div {
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%; }
+      #personData .uploadHead .upload_2 .u2_2 .imgWrap > div.bj {
+        background-color: #ebebeb; }
+    #personData .uploadHead .upload_2 .u2_2 .u2_2_2, #personData .uploadHead .upload_2 .u2_2 .u2_2_3, #personData .uploadHead .upload_2 .u2_2 .u2_2_4 {
+      float: left;
+      width: 33.3%; }
+    #personData .uploadHead .upload_2 .u2_2 .u2_2_1 {
+      position: absolute;
+      left: 0;
+      top: -40px; }
+    #personData .uploadHead .upload_2 .u2_2 .u2_2_2 .imgWrap > div {
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      margin-top: -60px;
+      margin-left: -60px; }
+    #personData .uploadHead .upload_2 .u2_2 .u2_2_3 .imgWrap > div {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      margin-top: -40px;
+      margin-left: -40px; }
+    #personData .uploadHead .upload_2 .u2_2 .u2_2_4 .imgWrap > div {
+      width: 34px;
+      height: 34px;
+      overflow: hidden;
+      margin-top: -17px;
+      margin-left: -17px; }
+  #personData .popUp1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    top: 0;
+    left: 0; }
+    #personData .popUp1 > div {
+      width: 100%;
+      height: 100%;
+      position: relative; }
+      #personData .popUp1 > div .popWrap {
+        width: 600px;
+        height: 450px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 50%;
+        margin-top: -225px;
+        left: 50%;
+        margin-left: -300px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 35px; }
+        #personData .popUp1 > div .popWrap .close {
+          width: 14px;
+          height: 14px;
+          background: url("../img/close02.png") no-repeat center;
+          background-size: 100% auto;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          cursor: pointer; }
+        #personData .popUp1 > div .popWrap .popTitle {
+          font-size: 18px;
+          color: #666666;
+          font-weight: bold;
+          margin-bottom: 35px; }
+        #personData .popUp1 > div .popWrap .popcont .cont-left {
+          width: 30%; }
+          #personData .popUp1 > div .popWrap .popcont .cont-left img {
+            margin: auto; }
+        #personData .popUp1 > div .popWrap .popcont .cont-right {
+          width: 70%; }
+          #personData .popUp1 > div .popWrap .popcont .cont-right .r1 {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 25px; }
+            #personData .popUp1 > div .popWrap .popcont .cont-right .r1 p {
+              text-align: justify;
+              line-height: 30px; }
+          #personData .popUp1 > div .popWrap .popcont .cont-right .r2 {
+            margin-bottom: 55px; }
+            #personData .popUp1 > div .popWrap .popcont .cont-right .r2 button {
+              padding: 14px 35px;
+              background-color: #00a6a0;
+              color: #ffffff; }
+          #personData .popUp1 > div .popWrap .popcont .cont-right .r3 .r3_1 {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 25px; }
+          #personData .popUp1 > div .popWrap .popcont .cont-right .r3 ul li {
+            line-height: 30px;
+            font-size: 14px;
+            color: #999999; }
+            #personData .popUp1 > div .popWrap .popcont .cont-right .r3 ul li .again {
+              color: #fdc405;
+              cursor: pointer; }
+  #personData .amend .amendWrap {
+    width: 45%;
+    margin: auto; }
+    #personData .amend .amendWrap .amendList {
+      line-height: 40px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #333333; }
+      #personData .amend .amendWrap .amendList .input {
+        display: inline-block;
+        border: 1px solid #dcdcdc;
+        width: 250px;
+        text-align: center; }
+        #personData .amend .amendWrap .amendList .input input {
+          width: 90%;
+          font-size: 16px;
+          color: #333333;
+          border: 0;
+          background-color: transparent; }
+      #personData .amend .amendWrap .amendList .btn {
+        text-align: right;
+        line-height: 0; }
+        #personData .amend .amendWrap .amendList .btn .input {
+          line-height: 0; }
+      #personData .amend .amendWrap .amendList button {
+        display: inline-block;
+        width: 250px;
+        line-height: 42px;
+        background-color: #f5f5f5;
+        font-size: 16px;
+        color: #333333;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #personData .amend .amendWrap .amendList button:hover {
+        background-color: #00a6a0;
+        color: #ffffff; }
+
+/*# sourceMappingURL=personData.css.map */

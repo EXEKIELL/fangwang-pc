@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,sBAAQ;EACN,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,IAAI;EACnB,wBAAC;IACC,UAAU,EAAE,OAAO;IACnB,WAAW,EAAE,IAAI;IACjB,SAAS,EAAE,IAAI;IACf,KAAK,EAAE,OAAO",
+"sources": ["aboutUsBrief.scss"],
+"names": [],
+"file": "aboutUsBrief.css"
+}

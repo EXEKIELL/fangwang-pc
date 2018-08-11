@@ -1,0 +1,209 @@
+#informationCenter .banner {
+  position: relative; }
+  #informationCenter .banner img {
+    width: 100%; }
+  #informationCenter .banner .detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); }
+    #informationCenter .banner .detail .detailWrap {
+      width: 100%;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      margin-top: -114px; }
+      #informationCenter .banner .detail .detailWrap .d_1 {
+        font-size: 18px;
+        color: #ffffff;
+        margin-bottom: 30px; }
+      #informationCenter .banner .detail .detailWrap .d_2 {
+        font-size: 70px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 30px; }
+        #informationCenter .banner .detail .detailWrap .d_2 span {
+          color: #00a6a0; }
+      #informationCenter .banner .detail .detailWrap .d_3 {
+        font-size: 40px;
+        color: #00a6a0; }
+  #informationCenter .banner .aboutUsNav {
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -20%;
+    left: 10%;
+    -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.1); }
+    #informationCenter .banner .aboutUsNav ul {
+      padding: 20px; }
+      #informationCenter .banner .aboutUsNav ul li {
+        border-bottom: 1px solid #eeeeee;
+        line-height: 40px;
+        padding: 0 30px; }
+        #informationCenter .banner .aboutUsNav ul li a {
+          font-size: 16px;
+          color: #333333; }
+        #informationCenter .banner .aboutUsNav ul li a:hover {
+          color: #00a6a0;
+          position: relative; }
+        #informationCenter .banner .aboutUsNav ul li a:hover:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          margin-top: -2.5%;
+          left: -15px;
+          width: 5px;
+          height: 5px;
+          background-color: #00a6a0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%; }
+      #informationCenter .banner .aboutUsNav ul li.sel a {
+        color: #00a6a0;
+        position: relative; }
+      #informationCenter .banner .aboutUsNav ul li.sel a:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -2.5%;
+        left: -15px;
+        width: 5px;
+        height: 5px;
+        background-color: #00a6a0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+#informationCenter .content .wrap {
+  width: 1200px;
+  margin: auto; }
+  #informationCenter .content .wrap .tabList {
+    text-align: center;
+    margin-bottom: 50px; }
+    #informationCenter .content .wrap .tabList span {
+      display: inline-block;
+      cursor: pointer;
+      padding: 7px 18px;
+      border: 1px solid #00a6a0;
+      color: #00a6a0;
+      font-size: 14px;
+      font-weight: lighter;
+      margin-right: 20px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
+    #informationCenter .content .wrap .tabList span:last-child {
+      margin-right: 20px; }
+    #informationCenter .content .wrap .tabList span:hover {
+      color: #ffffff;
+      background-color: #00a6a0;
+      -webkit-box-shadow: 0 0 15px rgba(0, 166, 160, 0.2);
+      -moz-box-shadow: 0 0 15px rgba(0, 166, 160, 0.2);
+      box-shadow: 0 0 15px rgba(0, 166, 160, 0.2); }
+    #informationCenter .content .wrap .tabList span.sel {
+      color: #ffffff;
+      background-color: #00a6a0;
+      -webkit-box-shadow: 0 0 15px rgba(0, 166, 160, 0.2);
+      -moz-box-shadow: 0 0 15px rgba(0, 166, 160, 0.2);
+      box-shadow: 0 0 15px rgba(0, 166, 160, 0.2); }
+  #informationCenter .content .wrap .contList .list {
+    width: 32%;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+    #informationCenter .content .wrap .contList .list .list-img {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 28px; }
+      #informationCenter .content .wrap .contList .list .list-img img {
+        width: 100%;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+    #informationCenter .content .wrap .contList .list .list-cont {
+      width: 95%; }
+      #informationCenter .content .wrap .contList .list .list-cont .cont_1 {
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 20px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #informationCenter .content .wrap .contList .list .list-cont .cont_2 {
+        font-size: 14px;
+        color: #999999;
+        margin-bottom: 20px;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s; }
+        #informationCenter .content .wrap .contList .list .list-cont .cont_2 p {
+          text-align: justify;
+          line-height: 24px; }
+      #informationCenter .content .wrap .contList .list .list-cont .cont_3 button {
+        padding: 8px 20px;
+        background-color: #f6f6f6;
+        color: #00a6a0;
+        font-size: 14px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+  #informationCenter .content .wrap .contList .list:nth-child(3n) {
+    margin-right: 0; }
+  #informationCenter .content .wrap .contList .list:hover {
+    background-color: #00a6a0; }
+    #informationCenter .content .wrap .contList .list:hover .list-img img {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+    #informationCenter .content .wrap .contList .list:hover .list-cont .cont_1 {
+      color: #ffffff;
+      font-weight: bold; }
+    #informationCenter .content .wrap .contList .list:hover .list-cont .cont_2 {
+      color: #ffffff; }
+    #informationCenter .content .wrap .contList .list:hover .list-cont .cont_3 button {
+      -webkit-box-shadow: 0 0 15px rgba(246, 246, 246, 0.4);
+      -moz-box-shadow: 0 0 15px rgba(246, 246, 246, 0.4);
+      box-shadow: 0 0 15px rgba(246, 246, 246, 0.4); }
+  #informationCenter .content .wrap .pagin {
+    width: 100%;
+    padding: 50px 0 70px 0;
+    text-align: center; }
+
+/*# sourceMappingURL=informationCenter.css.map */

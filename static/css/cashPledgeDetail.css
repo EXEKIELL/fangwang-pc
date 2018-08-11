@@ -1,0 +1,86 @@
+#cashPledgeDetail {
+  padding: 35px 60px; }
+  #cashPledgeDetail .pathWrap {
+    margin-bottom: 70px;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 30px; }
+    #cashPledgeDetail .pathWrap span {
+      font-size: 16px;
+      color: #333333;
+      padding-right: 18px;
+      margin-right: 12px;
+      position: relative;
+      cursor: pointer; }
+    #cashPledgeDetail .pathWrap span:last-child {
+      color: #00a6a0; }
+    #cashPledgeDetail .pathWrap span:last-child:after {
+      display: none; }
+    #cashPledgeDetail .pathWrap span:after {
+      content: '';
+      width: 8px;
+      height: 15px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -7px;
+      background: url("../../static/img/icon11.png") no-repeat center;
+      background-size: 100% auto; }
+  #cashPledgeDetail .cont .contWrap {
+    width: 550px;
+    margin: auto; }
+    #cashPledgeDetail .cont .contWrap .cw-top {
+      text-align: center;
+      margin-bottom: 40px; }
+      #cashPledgeDetail .cont .contWrap .cw-top .title {
+        font-size: 16px;
+        color: #666666;
+        margin-bottom: 35px; }
+      #cashPledgeDetail .cont .contWrap .cw-top .price {
+        color: #666666;
+        font-size: 30px;
+        margin-bottom: 25px; }
+      #cashPledgeDetail .cont .contWrap .cw-top .status {
+        font-size: 16px;
+        color: #d32816; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .text1 {
+      float: left;
+      font-size: 16px;
+      color: #999999; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .text2 {
+      float: right;
+      font-size: 16px;
+      color: #666666; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .text3 {
+      color: #cccccc; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .b1_1, #cashPledgeDetail .cont .contWrap .cw-bottom .b2_1, #cashPledgeDetail .cont .contWrap .cw-bottom .b2_2 {
+      margin-bottom: 45px; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .b1_2 {
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #f5f5f5; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .bottom_2 {
+      margin-bottom: 70px; }
+    #cashPledgeDetail .cont .contWrap .cw-bottom .bottom_3 {
+      text-align: right; }
+      #cashPledgeDetail .cont .contWrap .cw-bottom .bottom_3 button {
+        line-height: 40px;
+        padding: 0 40px;
+        background-color: #ffffff;
+        border: 1px solid #00a6a0;
+        color: #00a6a0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #cashPledgeDetail .cont .contWrap .cw-bottom .bottom_3 button:not([disabled]):hover {
+        background-color: #00a6a0;
+        color: #ffffff; }
+      #cashPledgeDetail .cont .contWrap .cw-bottom .bottom_3 button[disabled] {
+        line-height: 40px;
+        padding: 0 40px;
+        background-color: #f5f5f5;
+        border: 1px solid #dcdcdc;
+        color: #666666; }
+
+/*# sourceMappingURL=cashPledgeDetail.css.map */

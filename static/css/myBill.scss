@@ -1,0 +1,126 @@
+#myBill{
+  padding: 15px 40px;
+  .title{
+    line-height: 65px;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 28px;
+    .dateBtn{
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      overflow: hidden;
+      background: url("../img/icon17.png") no-repeat center;
+      background-size: 100% auto;
+      cursor: pointer;
+      line-height: 0;
+      position: relative;
+      top: 6px;
+      left: 20px;
+      >span{
+        display: inline-block;
+        opacity: 0;
+      }
+    }
+    .time{
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+  .listWrap{
+    ul{
+      li{
+        padding: 25px 32px;
+        border: 1px solid #ffffff;
+        cursor: pointer;
+        -webkit-transition: border 0.3s;
+        -moz-transition: border 0.3s;
+        -ms-transition: border 0.3s;
+        -o-transition: border 0.3s;
+        transition: border 0.3s;
+        .list-left{
+          width: 75%;
+          position: relative;
+          .left_icon{
+            width: 40px;
+            height: 40px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            img{
+              width: 100%;
+            }
+          }
+          .left_info{
+            width: 82%;
+            font-size: 16px;
+            color: #666666;
+            margin-left: 80px;
+            .info_title{
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .list-right{
+          width: 25%;
+          text-align: right;
+          .right_1{
+            font-size: 24px;
+            color: #666666;
+            margin-bottom: 14px;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            -ms-transition: color 0.3s;
+            -o-transition: color 0.3s;
+            transition: color 0.3s;
+            .p1{
+              color: #d10101;
+            }
+          }
+          .right_2{
+            color: #00a6a0;
+            font-size: 14px;
+          }
+        }
+      }
+      li.shou:hover{
+        border: 1px solid #fdc405;
+        .list-right{
+          .right_1{
+            color: #fdc405;
+
+          }
+        }
+      }
+      li.zhi:hover{
+        border: 1px solid #00a6a0;
+        .list-right{
+          .right_1{
+            color: #00a6a0;
+            .p1{
+
+            }
+          }
+        }
+      }
+    }
+  }
+  .pagin{
+    text-align: center;
+    padding: 30px 0;
+  }
+  .l2-3{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 20px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #999999;
+  }
+}

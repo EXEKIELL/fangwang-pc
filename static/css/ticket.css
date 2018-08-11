@@ -1,0 +1,268 @@
+#ticket {
+  padding: 48px 40px; }
+  #ticket .tab {
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 26px; }
+    #ticket .tab .tabLeft {
+      width: 80%; }
+      #ticket .tab .tabLeft span {
+        font-size: 16px;
+        color: #666666;
+        padding: 8px 25px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #ticket .tab .tabLeft span:hover {
+        color: #ffffff;
+        background-color: #00a6a0; }
+      #ticket .tab .tabLeft span.sel {
+        color: #ffffff;
+        background-color: #00a6a0; }
+    #ticket .tab .tabRight {
+      width: 20%; }
+      #ticket .tab .tabRight .selWrap {
+        position: relative;
+        width: 100%;
+        text-align: center; }
+        #ticket .tab .tabRight .selWrap .showWrap {
+          cursor: pointer;
+          line-height: 38px;
+          position: relative;
+          top: 2px; }
+        #ticket .tab .tabRight .selWrap .textInput {
+          border: 0;
+          background-color: transparent;
+          display: inline-block;
+          width: 75%;
+          font-size: 16px;
+          color: #333333;
+          text-align: center;
+          cursor: pointer; }
+        #ticket .tab .tabRight .selWrap .i {
+          display: inline-block;
+          width: 14px;
+          height: 8px;
+          background: url("../img/icon16.png") no-repeat center;
+          background-size: 100% auto; }
+        #ticket .tab .tabRight .selWrap .slideWrap {
+          background-color: #fff;
+          position: absolute;
+          width: 100%;
+          -webkit-box-shadow: 0 0 20px rgba(2, 2, 2, 0.1);
+          -moz-box-shadow: 0 0 20px rgba(2, 2, 2, 0.1);
+          box-shadow: 0 0 20px rgba(2, 2, 2, 0.1);
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          top: 0px;
+          left: 0;
+          opacity: 0;
+          z-index: -1; }
+          #ticket .tab .tabRight .selWrap .slideWrap li {
+            line-height: 35px;
+            font-size: 14px;
+            color: #333333;
+            cursor: pointer;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            -ms-transition: color 0.3s;
+            -o-transition: color 0.3s;
+            transition: color 0.3s; }
+            #ticket .tab .tabRight .selWrap .slideWrap li .icon {
+              width: 12px;
+              height: 9px;
+              display: inline-block;
+              background: url("../img/icon15.png") no-repeat center;
+              background-size: 100% auto;
+              margin-right: 10px;
+              opacity: 0;
+              -webkit-transition: opacity 0.3s;
+              -moz-transition: opacity 0.3s;
+              -ms-transition: opacity 0.3s;
+              -o-transition: opacity 0.3s;
+              transition: opacity 0.3s; }
+          #ticket .tab .tabRight .selWrap .slideWrap li:hover {
+            color: #fdc405; }
+            #ticket .tab .tabRight .selWrap .slideWrap li:hover .icon {
+              opacity: 1; }
+          #ticket .tab .tabRight .selWrap .slideWrap li.sel {
+            color: #fdc405; }
+            #ticket .tab .tabRight .selWrap .slideWrap li.sel .icon {
+              opacity: 1; }
+    #ticket .tab .tabRight:hover .slideWrap {
+      top: 40px;
+      opacity: 1;
+      z-index: 10; }
+  #ticket .ticketWrap {
+    padding: 0 50px;
+    position: relative;
+    margin-bottom: 50px; }
+    #ticket .ticketWrap .swiper01, #ticket .ticketWrap .swiper02 {
+      width: 100%;
+      height: 353px; }
+      #ticket .ticketWrap .swiper01 .swiper-slide, #ticket .ticketWrap .swiper02 .swiper-slide {
+        padding-right: 17px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative; }
+        #ticket .ticketWrap .swiper01 .swiper-slide .info, #ticket .ticketWrap .swiper02 .swiper-slide .info {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding-right: 17px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          top: 0;
+          left: 0;
+          z-index: 1000; }
+          #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 {
+            width: 100%;
+            height: 142px;
+            position: relative; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .del, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .del {
+              width: 50px;
+              height: 50px;
+              position: absolute;
+              top: -5px;
+              right: -5px;
+              background: url("../img/close04.png") no-repeat center;
+              background-size: 100% auto;
+              display: none;
+              cursor: pointer; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_1, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_1 {
+              text-align: center;
+              position: absolute;
+              top: 50%;
+              margin-top: -33px;
+              width: 100%; }
+              #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_1 .i1_1_1, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_1 .i1_1_1 {
+                font-size: 36px;
+                color: #ffffff;
+                font-weight: bold; }
+                #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .tag, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .tag {
+                  font-weight: normal; }
+                #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .num, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .num {
+                  position: relative; }
+                  #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .num span, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .num span {
+                    text-align: left;
+                    position: absolute;
+                    bottom: 0;
+                    left: 106%;
+                    width: 100px;
+                    font-size: 14px;
+                    color: #937f10; }
+              #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_1 .i1_1_2, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_1 .i1_1_2 {
+                font-size: 14px;
+                color: #ffffff; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_1 .i1_2, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_1 .i1_2 {
+              font-size: 12px;
+              color: #937f10;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center; }
+          #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 {
+            padding: 25px 15px;
+            font-size: 14px;
+            color: #999999; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .title, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .title {
+              color: #666666; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s1, #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s2, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s1, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s2 {
+              margin-bottom: 12px; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s3, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s3 {
+              margin-bottom: 40px; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s4, #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s5, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s4, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s5 {
+              width: 100%;
+              text-align: center; }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s4, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s4 {
+              margin-bottom: 8px; }
+              #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s4 button, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s4 button {
+                line-height: 30px;
+                padding: 0 23px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+                background-color: transparent;
+                border: 1px solid #edd65a;
+                color: #ecd44f;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s; }
+              #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s4 button:hover, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s4 button:hover {
+                background-color: #ecd44f;
+                color: #ffffff;
+                -webkit-box-shadow: 0 0 15px rgba(236, 212, 79, 0.5);
+                -moz-box-shadow: 0 0 15px rgba(236, 212, 79, 0.5);
+                box-shadow: 0 0 15px rgba(236, 212, 79, 0.5); }
+            #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s5, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s5 {
+              -webkit-transition: opacity 0.3s;
+              -moz-transition: opacity 0.3s;
+              -ms-transition: opacity 0.3s;
+              -o-transition: opacity 0.3s;
+              transition: opacity 0.3s;
+              opacity: 0;
+              font-size: 12px;
+              color: #ecd44f; }
+              #ticket .ticketWrap .swiper01 .swiper-slide .info .info_2 .s5 > span span, #ticket .ticketWrap .swiper02 .swiper-slide .info .info_2 .s5 > span span {
+                text-decoration: underline; }
+        #ticket .ticketWrap .swiper01 .swiper-slide img, #ticket .ticketWrap .swiper02 .swiper-slide img {
+          width: 100%; }
+      #ticket .ticketWrap .swiper01 .swiper-slide:hover .info .info_1 .del, #ticket .ticketWrap .swiper02 .swiper-slide:hover .info .info_1 .del {
+        display: block; }
+      #ticket .ticketWrap .swiper01 .swiper-slide:hover .info .info_2 .s5, #ticket .ticketWrap .swiper02 .swiper-slide:hover .info .info_2 .s5 {
+        opacity: 1; }
+    #ticket .ticketWrap .prev01, #ticket .ticketWrap .next01 {
+      width: 40px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      cursor: pointer; }
+    #ticket .ticketWrap .prev01 {
+      background: url("../img/hpLeft01.png") no-repeat center #00a6a0;
+      background-size: 30% auto;
+      left: 0; }
+    #ticket .ticketWrap .next01 {
+      background: url("../img/hpRight01.png") no-repeat center #00a6a0;
+      background-size: 30% auto;
+      right: 0; }
+  #ticket .ticketWrap1 .swiper02 .swiper-slide .info .info_1 .i1_1 .i1_1_1 .num span {
+    color: #019595; }
+  #ticket .ticketWrap1 .swiper02 .swiper-slide .info .info_1 .i1_2 {
+    color: #019595; }
+  #ticket .ticketWrap1 .swiper02 .swiper-slide .info .info_2 .s4 button {
+    color: #73d4d4;
+    border: 1px solid #74d4d4; }
+  #ticket .ticketWrap1 .swiper02 .swiper-slide .info .info_2 .s4 button:hover {
+    background-color: #73d4d4;
+    color: #ffffff;
+    -webkit-box-shadow: 0 0 15px rgba(115, 212, 212, 0.5);
+    -moz-box-shadow: 0 0 15px rgba(115, 212, 212, 0.5);
+    box-shadow: 0 0 15px rgba(115, 212, 212, 0.5); }
+  #ticket .ticketWrap1 .swiper02 .swiper-slide .info .info_2 .s5 {
+    color: #73d4d4; }
+  #ticket .list3 {
+    color: #00a6a0;
+    font-size: 16px;
+    padding: 0 50px; }
+    #ticket .list3 span {
+      cursor: pointer; }
+  #ticket .guoqi {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background: url("../img/guoqi01.png") no-repeat center;
+    background-size: 100%  auto; }
+
+/*# sourceMappingURL=ticket.css.map */

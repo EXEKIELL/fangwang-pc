@@ -1,0 +1,226 @@
+#safety{
+  padding: 48px 40px;
+  .list1{
+    line-height: 40px;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    .l1_left{
+      width: 80%;
+      .left_1{
+        margin-right: 24px;
+        font-size: 14px;
+        color: #333333;
+        >span{
+          display: inline-block;
+        }
+        .lineWrap{
+          width: 100px;
+          height: 13px;
+          position: relative;
+          top: 1px;
+          background-color: #cccccc;
+          margin-right: 10px;
+          span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #73b149;
+          }
+          .level1{
+            width: 5%;
+          }
+          .level2{
+            width: 25%;
+          }
+          .level3{
+            width: 50%;
+          }
+          .level4{
+            width: 75%;
+          }
+          .level5{
+            width: 95%;
+          }
+        }
+      }
+      .left_2{
+        font-size: 14px;
+        color: #fdc405;
+      }
+    }
+    .l1_right{
+      width: 20%;
+      font-size: 14px;
+      color: #00a6a0;
+      text-align: right;
+      span{
+        cursor: pointer;
+      }
+    }
+  }
+  .list2{
+    li{
+      padding: 45px 0;
+      border-bottom: 1px solid #eeeeee;
+      .liWrap{
+        .wrap_left{
+          width: 90%;
+          line-height: 28px;
+          .left_1{
+            font-size: 18px;
+            color: #666666;
+            font-weight: bold;
+
+            position: relative;
+            span{
+              display: inline-block;
+              vertical-align: middle;
+            }
+            .icon{
+              width: 28px;
+              height: 20px;
+              margin: 0 15px 0 15px;
+            }
+            .suc{
+              background: url("../img/icon23.png") no-repeat center;
+              background-size: 100% auto;
+            }
+          }
+          .left_2{
+            font-size: 14px;
+            color: #333333;
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            >div{
+              span{
+                font-size: 14px;
+                color: #999999;
+              }
+            }
+            >span{
+              span{
+                color: #fdc405;
+              }
+            }
+            .div2{
+              color: #fdc405;
+              span{
+                color: #00a6a0;
+                cursor: pointer;
+              }
+            }
+            .span1{
+              margin-right: 15px;
+            }
+          }
+          .left_2:after{
+            content: '';
+            display: block;
+            border-left: 1px solid #e5e5e5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+          }
+        }
+        .wrap_right{
+          width: 10%;
+          text-align: right;
+          span{
+            color: #00a6a0;
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    li:last-child{
+      border-bottom: 4px solid #eeeeee;
+    }
+  }
+  .list3{
+    padding: 45px 0;
+    .liWrap{
+      .wrap_left{
+        width: 90%;
+        line-height: 28px;
+        .left_1{
+          font-size: 18px;
+          color: #666666;
+          font-weight: bold;
+
+          position: relative;
+          span{
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .icon{
+            width: 26px;
+            height: 30px;
+            margin: 0 15px 0 15px;
+          }
+          .suc{
+            background: url("../img/icon24.png") no-repeat center;
+            background-size: 100% auto;
+          }
+        }
+        .left_2{
+          font-size: 14px;
+          color: #333333;
+          position: relative;
+          margin-left: 20px;
+          padding-left: 20px;
+          >div{
+            span{
+              font-size: 14px;
+              color: #999999;
+            }
+          }
+          >span{
+            span{
+              color: #fdc405;
+            }
+          }
+          .div2{
+            color: #fdc405;
+            span{
+              color: #00a6a0;
+              cursor: pointer;
+            }
+          }
+          .span1{
+            margin-right: 15px;
+          }
+        }
+        .left_2:after{
+          content: '';
+          display: block;
+          border-left: 1px solid #e5e5e5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+        }
+      }
+      .wrap_right{
+        width: 10%;
+        text-align: right;
+        span{
+          color: #00a6a0;
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 15px;
+        }
+        button{
+          background-color: #00a6a0;
+          color: #ffffff;
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+}

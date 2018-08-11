@@ -1,0 +1,53 @@
+#earnest {
+  padding: 40px; }
+  #earnest .list1 {
+    position: relative; }
+    #earnest .list1 img {
+      width: 100%; }
+    #earnest .list1 .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+      #earnest .list1 .info .infoWrap {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        margin-top: -39px; }
+        #earnest .list1 .info .infoWrap .price {
+          font-size: 36px;
+          color: #fdc405;
+          font-weight: bold;
+          margin-bottom: 10px; }
+          #earnest .list1 .info .infoWrap .price span {
+            font-size: 18px;
+            font-weight: normal; }
+        #earnest .list1 .info .infoWrap .text {
+          font-size: 16px;
+          color: #333333; }
+  #earnest .list2 {
+    padding: 30px 60px; }
+    #earnest .list2 .slide {
+      line-height: 50px; }
+    #earnest .list2 .liLeft {
+      width: 80%;
+      font-size: 16px;
+      color: #333333; }
+      #earnest .list2 .liLeft .title {
+        margin-right: 30px; }
+      #earnest .list2 .liLeft .look {
+        color: #00a6a0;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 12px; }
+    #earnest .list2 .liRight {
+      width: 20%;
+      font-size: 16px;
+      color: #999999; }
+  #earnest .pagin {
+    text-align: center;
+    padding: 30px 0; }
+
+/*# sourceMappingURL=earnest.css.map */

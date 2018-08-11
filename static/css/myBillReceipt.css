@@ -1,0 +1,68 @@
+#myBillReceipt {
+  padding: 35px 60px; }
+  #myBillReceipt .pathWrap {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 30px; }
+    #myBillReceipt .pathWrap span {
+      font-size: 16px;
+      color: #333333;
+      padding-right: 18px;
+      margin-right: 12px;
+      position: relative;
+      cursor: pointer; }
+    #myBillReceipt .pathWrap span:last-child {
+      color: #00a6a0; }
+    #myBillReceipt .pathWrap span:last-child:after {
+      display: none; }
+    #myBillReceipt .pathWrap span:after {
+      content: '';
+      width: 8px;
+      height: 15px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -7px;
+      background: url("../../static/img/icon11.png") no-repeat center;
+      background-size: 100% auto; }
+  #myBillReceipt .listWrap {
+    padding: 0 35px; }
+  #myBillReceipt .list1 {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 30px 0; }
+    #myBillReceipt .list1 .l1_1 {
+      font-size: 16px;
+      color: #333333;
+      width: 65%;
+      line-height: 80px; }
+    #myBillReceipt .list1 .l1_2 {
+      width: 35%;
+      font-size: 14px;
+      color: #999999;
+      text-align: right; }
+      #myBillReceipt .list1 .l1_2 > div {
+        margin-bottom: 10px; }
+  #myBillReceipt .list2 {
+    font-size: 16px;
+    padding: 45px 0;
+    border-bottom: 1px solid #dcdcdc; }
+    #myBillReceipt .list2 .l2_1 {
+      color: #999999; }
+      #myBillReceipt .list2 .l2_1 .billNum > div, #myBillReceipt .list2 .l2_1 .billTime > div {
+        margin-bottom: 16px; }
+    #myBillReceipt .list2 .l2_2 {
+      color: #666666; }
+      #myBillReceipt .list2 .l2_2 .title {
+        margin: 32px 0; }
+  #myBillReceipt .list3 {
+    text-align: right;
+    font-size: 16px;
+    color: #666666;
+    padding: 50px 0;
+    border-bottom: 1px solid #dcdcdc; }
+    #myBillReceipt .list3 .price {
+      margin-left: 50px;
+      color: #00a6a0;
+      font-size: 30px; }
+
+/*# sourceMappingURL=myBillReceipt.css.map */

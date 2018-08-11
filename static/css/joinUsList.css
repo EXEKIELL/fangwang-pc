@@ -1,0 +1,127 @@
+#joinUsList .wrap {
+  width: 1200px;
+  margin: auto; }
+#joinUsList .list1 {
+  margin-bottom: 40px; }
+  #joinUsList .list1 .list1-left {
+    width: 30%; }
+    #joinUsList .list1 .list1-left .left_1 {
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 10px; }
+    #joinUsList .list1 .list1-left .left_2 {
+      font-size: 16px;
+      font-weight: lighter;
+      color: #999999; }
+  #joinUsList .list1 .list1-right {
+    width: 70%;
+    position: relative;
+    top: 15px; }
+    #joinUsList .list1 .list1-right > div {
+      position: relative; }
+      #joinUsList .list1 .list1-right > div .placeholder {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 14px;
+        font-weight: lighter;
+        color: #333333; }
+    #joinUsList .list1 .list1-right .jobClass {
+      width: 15%;
+      margin-right: 20px; }
+    #joinUsList .list1 .list1-right .area {
+      width: 20%;
+      margin-right: 20px; }
+    #joinUsList .list1 .list1-right .textSearch {
+      width: 60%; }
+      #joinUsList .list1 .list1-right .textSearch .input {
+        width: 80%;
+        border: 1px solid #00a6a0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        line-height: 38px; }
+        #joinUsList .list1 .list1-right .textSearch .input input {
+          font-size: 14px;
+          color: #333333;
+          width: 90%;
+          margin-left: 15px;
+          border: 0;
+          position: relative;
+          z-index: 1;
+          background-color: transparent; }
+        #joinUsList .list1 .list1-right .textSearch .input .placeholder {
+          top: 1px;
+          font-size: 14px; }
+      #joinUsList .list1 .list1-right .textSearch .button {
+        width: 20%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #00a6a0;
+        height: 40px; }
+        #joinUsList .list1 .list1-right .textSearch .button button {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background-color: #00a6a0;
+          color: #ffffff;
+          font-size: 16px; }
+#joinUsList .list2 {
+  margin-bottom: 0px; }
+  #joinUsList .list2 ul {
+    width: 100%; }
+    #joinUsList .list2 ul li {
+      width: 100%;
+      line-height: 80px; }
+      #joinUsList .list2 ul li > div {
+        float: left;
+        width: 25%;
+        text-align: center; }
+        #joinUsList .list2 ul li > div button {
+          line-height: 40px;
+          padding: 0 26px;
+          background-color: transparent;
+          border: 0;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+  #joinUsList .list2 .l2-title li {
+    background-color: #333333;
+    font-size: 18px;
+    color: #ffffff; }
+  #joinUsList .list2 .l2-detail li {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #333333;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  #joinUsList .list2 .l2-detail li:nth-child(2n+1) {
+    background-color: #f6f6f6; }
+  #joinUsList .list2 .l2-detail li:hover {
+    background-color: #00a6a0;
+    color: #ffffff;
+    -webkit-box-shadow: 0 0 15px rgba(0, 166, 160, 0.4);
+    -moz-box-shadow: 0 0 15px rgba(0, 166, 160, 0.4);
+    box-shadow: 0 0 15px rgba(0, 166, 160, 0.4); }
+    #joinUsList .list2 .l2-detail li:hover > div button {
+      background-color: #ffffff;
+      color: #00a6a0;
+      -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      -moz-box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+#joinUsList .pagin {
+  width: 100%;
+  padding: 50px 0 70px 0;
+  text-align: center; }
+
+/*# sourceMappingURL=joinUsList.css.map */

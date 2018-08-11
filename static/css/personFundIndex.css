@@ -1,0 +1,56 @@
+#personFundIndex {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  #personFundIndex .index_left {
+    width: 12%;
+    position: absolute;
+    height: 100%;
+    min-height: 340px;
+    top: 0;
+    left: 0; }
+    #personFundIndex .index_left ul {
+      padding-top: 25px;
+      width: 100%;
+      height: 100%;
+      border-right: 1px solid #f5f5f5; }
+      #personFundIndex .index_left ul li {
+        font-size: 16px;
+        color: #999999;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer; }
+      #personFundIndex .index_left ul li:hover {
+        color: #00a6a0;
+        font-weight: bold;
+        position: relative; }
+      #personFundIndex .index_left ul li:hover:after {
+        content: '';
+        display: block;
+        width: 11px;
+        height: 20px;
+        background: url("../img/icon09.png") no-repeat center;
+        background-size: 100% auto;
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        margin-top: -10px; }
+      #personFundIndex .index_left ul li.sel {
+        color: #00a6a0;
+        font-weight: bold;
+        position: relative; }
+      #personFundIndex .index_left ul li.sel:after {
+        content: '';
+        display: block;
+        width: 11px;
+        height: 20px;
+        background: url("../img/icon09.png") no-repeat center;
+        background-size: 100% auto;
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        margin-top: -10px; }
+  #personFundIndex .index_right {
+    width: 88%; }
+
+/*# sourceMappingURL=personFundIndex.css.map */

@@ -1,0 +1,53 @@
+#cashPledge {
+  padding: 40px; }
+  #cashPledge .list1 {
+    position: relative; }
+    #cashPledge .list1 img {
+      width: 100%; }
+    #cashPledge .list1 .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+      #cashPledge .list1 .info .infoWrap {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        margin-top: -39px; }
+        #cashPledge .list1 .info .infoWrap .price {
+          font-size: 36px;
+          color: #fdc405;
+          font-weight: bold;
+          margin-bottom: 10px; }
+          #cashPledge .list1 .info .infoWrap .price span {
+            font-size: 18px;
+            font-weight: normal; }
+        #cashPledge .list1 .info .infoWrap .text {
+          font-size: 16px;
+          color: #333333; }
+  #cashPledge .list2 {
+    padding: 30px 60px; }
+    #cashPledge .list2 .slide {
+      line-height: 50px; }
+    #cashPledge .list2 .liLeft {
+      width: 80%;
+      font-size: 16px;
+      color: #333333; }
+      #cashPledge .list2 .liLeft .title {
+        margin-right: 30px; }
+      #cashPledge .list2 .liLeft .look {
+        color: #00a6a0;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 12px; }
+    #cashPledge .list2 .liRight {
+      width: 20%;
+      font-size: 16px;
+      color: #999999; }
+  #cashPledge .pagin {
+    text-align: center;
+    padding: 30px 0; }
+
+/*# sourceMappingURL=cashPledge.css.map */
