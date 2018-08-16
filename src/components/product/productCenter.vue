@@ -14,7 +14,7 @@
               </li>
             </ul>
             <div class="h2_login floatl">
-              <span class="login"><i></i>登录</span><span>/</span><span class="register">注册</span>
+              <span @click="$router.push('/login')" class="login"><i @click.stop="$router.push('/personCenter')"></i>登录</span><span>/</span><span class="register">注册</span>
             </div>
           </div>
         </div>
@@ -59,36 +59,36 @@
         return {
           //header
           headerList:[
-            {name:'首页',url:'###'},
-            {name:'商铺',url:'###'},
-            {name:'写字楼',url:'###'},
-            {name:'厂房车位',url:'###'},
-            {name:'闲置土地',url:'###'},
-            {name:'楼房',url:'###'},
-            {name:'租房',url:'###'},
-            {name:'竞拍',url:'###'},
-            {name:'地图找房',url:'###'}
+            {name:'首页',url:'/homePage'},
+            {name:'商铺',url:'/productCenter/productDetail'},
+            {name:'写字楼',url:'/productCenter/productDetail'},
+            {name:'厂房车位',url:'/productCenter/productDetail'},
+            {name:'闲置土地',url:'/productCenter/productDetail'},
+            {name:'楼房',url:'/productCenter/productDetail'},
+            {name:'租房',url:'/productCenter/productDetail'},
+            {name:'竞拍',url:'/productCenter/productDetail'},
+            {name:'地图找房',url:'/productCenter/mapSearch'}
           ],
           //header状态
           headerIdx:0,
           //footer
           footerList1:[
-            {name:'首页',url:'###'},
-            {name:'关于我们',url:'###'},
-            {name:'租赁中心',url:'###'},
+            {name:'首页',url:'/homePage'},
+            {name:'关于我们',url:'/mainWrap/aboutUs'},
+            {name:'租赁中心',url:'/productCenter'},
             {name:'新闻动态   ',url:'###'},
             {name:'联系我们',url:'###'},
           ],
           footerList2:[
-            {name:'买新房',url:'###'},
-            {name:'买二手房',url:'###'},
-            {name:'整租',url:'###'},
-            {name:'整租',url:'###'},
-            {name:'写字楼',url:'###'},
-            {name:'商铺',url:'###'},
-            {name:'厂房车位',url:'###'},
-            {name:'闲置土地',url:'###'},
-            {name:'地图找房',url:'###'},
+            {name:'买新房',url:'/productCenter/productDetail'},
+            {name:'买二手房',url:'/productCenter/productDetail'},
+            {name:'整租',url:'/productCenter/productDetail'},
+            {name:'整租',url:'/productCenter/productDetail'},
+            {name:'写字楼',url:'/productCenter/productDetail'},
+            {name:'商铺',url:'/productCenter/productDetail'},
+            {name:'厂房车位',url:'/productCenter/productDetail'},
+            {name:'闲置土地',url:'/productCenter/productDetail'},
+            {name:'地图找房',url:'/productCenter/mapSearch'},
           ],
           footerList3:[
             {name:'网站设置',url:'###'},

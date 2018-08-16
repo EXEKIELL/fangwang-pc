@@ -105,7 +105,7 @@
               <div @click="tabSel(2)" :class="{sel:tabIdx == 2}">推荐热度</div>
             </div>
             <div class="listWrap">
-              <div class="list clearfloat" v-for="(item,index) in 6" :key="index">
+              <div @click="$router.push({path: '/productCenter/productInfo',query:{}})" class="list clearfloat" v-for="(item,index) in 6" :key="index">
                 <div class="list-left floatl clearfloat">
                   <div class="left-img floatl">
                     <img src="../../../static/img/img29.png" alt="">

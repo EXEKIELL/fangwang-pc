@@ -3,8 +3,8 @@
       <div class="mainHeader">
         <div class="wrap clearfloat">
           <div class="h-left floatl clearfloat">
-            <div class="left-logo floatl">
-              <img src="../../static/img/logo01.png" alt="">
+            <div @click="$router.push('/homePage')" class="left-logo floatl" style="cursor: pointer;">
+              <img src="../../static/img/logo02.png" alt="">
             </div>
             <div class="left-area floatl">
               <span><i></i>清远</span>
@@ -17,7 +17,7 @@
               </li>
             </ul>
             <div class="loginStatus floatl">
-              <span class="icon" @click="$router.push('/personCenter')"></span><span class="exit">退出</span>
+              <span class="icon" @click="$router.push('/personCenter')"></span><span class="exit" @click="$router.push('/login')">退出</span>
             </div>
           </div>
         </div>
@@ -71,22 +71,22 @@
           navStaus:0,
           //footer
           footerList1:[
-            {name:'首页',url:'###'},
-            {name:'关于我们',url:'###'},
-            {name:'租赁中心',url:'###'},
+            {name:'首页',url:'/homePage'},
+            {name:'关于我们',url:'/mainWrap/aboutUs'},
+            {name:'租赁中心',url:'/productCenter'},
             {name:'新闻动态   ',url:'###'},
             {name:'联系我们',url:'###'},
           ],
           footerList2:[
-            {name:'买新房',url:'###'},
-            {name:'买二手房',url:'###'},
-            {name:'整租',url:'###'},
-            {name:'整租',url:'###'},
-            {name:'写字楼',url:'###'},
-            {name:'商铺',url:'###'},
-            {name:'厂房车位',url:'###'},
-            {name:'闲置土地',url:'###'},
-            {name:'地图找房',url:'###'},
+            {name:'买新房',url:'/productCenter/productDetail'},
+            {name:'买二手房',url:'/productCenter/productDetail'},
+            {name:'整租',url:'/productCenter/productDetail'},
+            {name:'整租',url:'/productCenter/productDetail'},
+            {name:'写字楼',url:'/productCenter/productDetail'},
+            {name:'商铺',url:'/productCenter/productDetail'},
+            {name:'厂房车位',url:'/productCenter/productDetail'},
+            {name:'闲置土地',url:'/productCenter/productDetail'},
+            {name:'地图找房',url:'/productCenter/mapSearch'},
           ],
           footerList3:[
             {name:'网站设置',url:'###'},

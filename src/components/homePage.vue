@@ -3,7 +3,7 @@
     <div class="header">
       <div class="headerWrap clearfloat">
         <div class="headerLeft floatl clearfloat">
-          <div class="logo floatl">
+          <div class="logo floatl" @click="$router.push('/homePage')" style="cursor: pointer;">
             <img src="../../static/img/logo02.png" alt="">
           </div>
           <div class="address floatl">
@@ -22,7 +22,7 @@
                 <router-link to="###">注册</router-link>
               </div>
               <div class="lastLi-2" v-else>
-                <span @click="toPerson" style="cursor: pointer;" class="icon"></span><span class="exit">退出</span>
+                <span @click="toPerson" style="cursor: pointer;" class="icon"></span><span class="exit" @click="$router.push('/login')">退出</span>
               </div>
             </li>
           </ul>
@@ -96,13 +96,15 @@
     <!--导航-->
     <div class="list2" :class="{list2_1:list2Status}">
       <ul class="clearfloat">
-        <li class="floatl" :class="{sel:nav1Idx == index}" v-for="(item,index) in navList1" :key="index">
-          <div class="icon">
-            <img :src="item.icon" alt="">
-          </div>
-          <div class="text">{{item.name}}</div>
+        <li @click="" class="floatl" :class="{sel:nav1Idx == index}" v-for="(item,index) in navList1" :key="index">
+          <router-link :to="item.url">
+            <div class="icon">
+              <img :src="item.icon" alt="">
+            </div>
+            <div class="text">{{item.name}}</div>
+          </router-link>
           <ul class="chilNav">
-            <li v-for="(item1,index1) in item.children" :key="index1">{{item1.name}}</li>
+            <li @click="$router.push('/productCenter/productDetail')" v-for="(item1,index1) in item.children" :key="index1">{{item1.name}}</li>
           </ul>
         </li>
       </ul>
@@ -150,7 +152,7 @@
           <div class="title_3 floatr">
             <button class="but_1 sel">出售</button>
             <button class="but_1">出租</button>
-            <button class="but_3">更多商城>></button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多商城>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
@@ -225,7 +227,7 @@
           <div class="title_3 floatr">
             <button class="but_1 sel">出售</button>
             <button class="but_1">出租</button>
-            <button class="but_3">更多写字楼>></button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多写字楼>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
@@ -333,7 +335,7 @@
           <div class="title_3 floatr">
             <button class="but_1 sel">出售</button>
             <button class="but_1">出租</button>
-            <button class="but_3">更多厂房车位>></button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多厂房车位>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
@@ -405,7 +407,7 @@
           </div>
           <div class="title_3 floatr">
             <button class="but_1 sel">出租</button>
-            <button class="but_3">更多土地>></button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多土地>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
@@ -478,13 +480,13 @@
           <div class="title_3 floatr">
             <button class="but_1 sel">新房</button>
             <button class="but_1">二手房</button>
-            <button class="but_3">更多楼房>></button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多楼房>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
           <div class="wc1 floatl">
             <div class="wc-title clearfloat">
-              <span class="title1 floatl">优质楼盘</span><span class="title2 floatr">更多楼盘推荐</span>
+              <span class="title1 floatl">优质楼盘</span><span class="title2 floatr" @click="$router.push('/productCenter/productDetail')">更多楼盘推荐</span>
             </div>
             <div class="wc-swiper">
               <div class="swiper-container swiper04">
@@ -527,7 +529,7 @@
           </div>
           <div class="wc2 floatr">
             <div class="wc-title clearfloat">
-              <span class="title1 floatl">小区推荐</span><span class="title2 floatr">更多小区推荐</span>
+              <span class="title1 floatl">小区推荐</span><span class="title2 floatr" @click="$router.push('/productCenter/productDetail')">更多小区推荐</span>
             </div>
             <div class="wc-cont clearfloat">
               <div class="cont-list">
@@ -784,7 +786,7 @@
                 </ul>
               </div>
               <div class="more">
-                <button>更多资讯</button>
+                <button >更多资讯</button>
               </div>
             </div>
           </div>
@@ -901,7 +903,7 @@
       <ul>
         <li :class="'li'+(index+1)" v-for="(item,index) in navList3" :key="index">
           <div class="hover">
-            <span>{{item.name}}</span>
+            <span @click="$router.push(item.url)">{{item.name}}</span>
           </div>
         </li>
         <li class="li7" @click="toTop">
@@ -925,14 +927,14 @@
             {name:'下载APP',path:'###'}
           ],
           navList1:[
-            {name:'商铺',icon:'static/img/nav01.png',url:'',children:[{name:'出租',url:'###'},{name:'出售',url:'###'}]},
-            {name:'写字楼',icon:'static/img/nav02.png',url:'',children:[{name:'出租',url:'###'},{name:'出售',url:'###'}]},
-            {name:'厂房车位',icon:'static/img/nav03.png',url:'',children:[{name:'出租',url:'###'},{name:'出售',url:'###'}]},
-            {name:'闲置土地',icon:'static/img/nav04.png',url:'',children:[]},
-            {name:'楼房',icon:'static/img/nav05.png',url:'',children:[{name:'新房',url:'###'},{name:'二手房',url:'###'}]},
-            {name:'租房',icon:'static/img/nav06.png',url:'',children:[{name:'合租',url:'###'},{name:'整租',url:'###'}]},
-            {name:'竞拍',icon:'static/img/nav07.png',url:'',children:[]},
-            {name:'地图找房',icon:'static/img/nav08.png',url:'',children:[]},
+            {name:'商铺',icon:'static/img/nav01.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
+            {name:'写字楼',icon:'static/img/nav02.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
+            {name:'厂房车位',icon:'static/img/nav03.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
+            {name:'闲置土地',icon:'static/img/nav04.png',url:'/productCenter',children:[]},
+            {name:'楼房',icon:'static/img/nav05.png',url:'/productCenter',children:[{name:'新房',url:'/productCenter'},{name:'二手房',url:'/productCenter'}]},
+            {name:'租房',icon:'static/img/nav06.png',url:'/productCenter',children:[{name:'合租',url:'/productCenter'},{name:'整租',url:'/productCenter'}]},
+            {name:'竞拍',icon:'static/img/nav07.png',url:'/productCenter',children:[]},
+            {name:'地图找房',icon:'static/img/nav08.png',url:'/productCenter',children:[]},
           ],
           tabList:['企业新闻','国家政策','购房指南'],
           tabIdx:0,
@@ -942,6 +944,7 @@
             {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
             {title:'碧桂园欢乐颂邀请你加入未来群聊”',time:'2018-06-29',url:''},
             {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
+
           ],
           newListIdx:0,
           nav1Idx:-1,
@@ -975,15 +978,15 @@
             {name:'联系我们',url:'###'},
           ],
           footerList2:[
-            {name:'买新房',url:'###'},
-            {name:'买二手房',url:'###'},
-            {name:'整租',url:'###'},
-            {name:'整租',url:'###'},
-            {name:'写字楼',url:'###'},
-            {name:'商铺',url:'###'},
-            {name:'厂房车位',url:'###'},
-            {name:'闲置土地',url:'###'},
-            {name:'地图找房',url:'###'},
+            {name:'买新房',url:'/productCenter/productDetail'},
+            {name:'买二手房',url:'/productCenter/productDetail'},
+            {name:'整租',url:'/productCenter/productDetail'},
+            {name:'整租',url:'/productCenter/productDetail'},
+            {name:'写字楼',url:'/productCenter/productDetail'},
+            {name:'商铺',url:'/productCenter/productDetail'},
+            {name:'厂房车位',url:'/productCenter/productDetail'},
+            {name:'闲置土地',url:'/productCenter/productDetail'},
+            {name:'地图找房',url:'/productCenter/mapSearch'},
           ],
           footerList3:[
             {name:'网站设置',url:'###'},
@@ -996,12 +999,12 @@
           ],
           //侧边栏
           navList3:[
-            {name:'我的收藏',url:'###'},
+            {name:'我的收藏',url:'/personCenter/personCollect'},
             {name:'我的消息',url:'###'},
             {name:'扫一扫',url:'###'},
             {name:'房贷计算器',url:'###'},
             {name:'在线客服',url:'###'},
-            {name:'问题反馈',url:'###'}
+            {name:'问题反馈',url:'/mainWrap/messageAdvice'}
           ],
           show01:true,
           searchList:['楼房','写字楼','商城','厂房','土地'],

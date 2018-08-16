@@ -151,7 +151,7 @@
           </div>
           <div class="list2">
             <div class="logo">
-              <img src="../../../static/img/logo01.png" alt="">
+              <img src="../../../static/img/logo02.png" alt="">
             </div>
             <div>1秒即登陆，方便又安全</div>
           </div>
@@ -330,6 +330,7 @@
               $('.pw').siblings('.text').show();
             }else{
               console.log(formData);
+              this.$router.push('/homePage');
             }
           }else if(i == 1){
             if(formData1.phone == ''){

@@ -3,8 +3,8 @@
     <div class="personHeader">
       <div class="wrap clearfloat">
         <div class="h-left floatl clearfloat">
-          <div class="left-logo floatl">
-            <img src="../../../static/img/logo03.png" alt="">
+          <div class="left-logo floatl" @click="$router.push('/homePage')" style="cursor:pointer;">
+            <img src="../../../static/img/logo02.png" alt="">
           </div>
           <div class="left-area floatl">
             <span><i></i>清远</span>
@@ -17,7 +17,7 @@
             </li>
           </ul>
           <div class="loginStatus floatl">
-            <span class="icon" @click="$router.push('/personCenter')"></span><span class="exit">退出</span>
+            <span class="icon" @click="$router.push('/personCenter')"></span><span class="exit" @click="$router.push('/login')">退出</span>
           </div>
         </div>
       </div>
