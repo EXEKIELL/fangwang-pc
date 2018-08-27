@@ -12,7 +12,7 @@
         </div>
         <div class="headerRight floatr">
           <ul class="clearfloat">
-            <li v-for="(item,index) in navList" :key="index">
+            <li @click="navSel = index" v-for="(item,index) in navList" :key="index" class="navLi" :class="{sel:navSel == index}">
               <router-link :to="item.path">{{item.name}}</router-link>
             </li>
             <li class="lastLi">
@@ -30,26 +30,53 @@
       </div>
     </div>
     <div class="list1">
-      <img src="../../static/img/hpBanner01.png" alt="">
-      <div class="l1-wrap">
-        <div class="l1wrapTitle">
-          鸿图基业，富甲亿房
-        </div>
-        <div class="l1wrapSearch">
-          <div class="search01">
-            <ul class="clearfloat">
-              <li @click="searchSel(index)" :class="{sel:searchClass == index}" v-for="(item,index) in searchList" :key="index">{{item}}</li>
-            </ul>
-            <div class="sel1"></div>
+      <!--<img src="../../static/img/hpBanner01.png" alt="">-->
+      <div class="swiper-container bannerSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../../static/img/hpBanner01.png" alt="">
           </div>
+          <div class="swiper-slide">
+            <img src="../../static/img/hpBanner01.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../../static/img/hpBanner01.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="l1wrapTitle">
+        鸿基伟业，盈盈资宝
+      </div>
+      <div class="l1-wrap">
+        <div class="l1wrapSearch">
+          <!--<div class="search01">-->
+            <!--<ul class="clearfloat">-->
+              <!--<li @click="searchSel(index)" :class="{sel:searchClass == index}" v-for="(item,index) in searchList" :key="index">{{item}}</li>-->
+            <!--</ul>-->
+            <!--<div class="sel1"></div>-->
+          <!--</div>-->
           <div class="search02 clearfloat">
             <div class="s2-1 floatl clearfloat">
               <div class="input floatl">
                 <input type="text" v-model="searchData">
                 <span v-if="searchData == ''" class="placeholder">区域 / 商圈名称</span>
+                <div class="sortWrap">
+                  <template>
+                    <el-select v-model="sort01" placeholder="请选择">
+                      <el-option
+                        v-for="item in sorts"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                      </el-option>
+                    </el-select>
+                  </template>
+                </div>
               </div>
               <div class="button floatl">
-                <button></button>
+                <button>
+                  <span class="icon"></span><span>搜 索</span>
+                </button>
               </div>
             </div>
             <div class="s2-2 floatl">
@@ -110,32 +137,174 @@
       </ul>
     </div>
     <!--租购新体验-->
-    <div class="list3">
+    <div style="background-color: #fff;" class="list3">
       <div class="wrap">
-        <div class="title title-1">
+        <div class="title">
           <div class="title_1">租购新体验</div>
           <div class="title_2">优质房源  品质生活 </div>
         </div>
+        <div class="wrap-cont clearfloat" style="margin-bottom: 20px;">
+          <div class="cont_1 floatl" style="margin-right: 0;">
+            <img src="../../static/img/img41.png" alt="">
+            <div class="c1-title">
+              <div class="c1-title_1">地图找房</div>
+              <div class="c1-title_2">线上完成签合同</div>
+            </div>
+          </div>
+          <div class="mapWrap floatl">
+            <baidu-map ref="mapWrap"></baidu-map>
+          </div>
+        </div>
         <div class="wrap-cont clearfloat">
           <div class="cont_1 floatl">
-            <img src="../../static/img/img02.png" alt="">
+            <img src="../../static/img/img02_1.png" alt="">
             <div class="c1-title">
-              <div class="c1-title_1">即时看房</div>
-              <div class="c1-title_2">在家也能把房看</div>
+              <div class="c1-title_1">竞抢物业</div>
+              <div class="c1-title_2">好物业抢先一步</div>
             </div>
           </div>
           <div class="cont_1 floatl">
-            <img src="../../static/img/img03.png" alt="">
+            <img src="../../static/img/img03_1.png" alt="">
             <div class="c1-title c1-title1">
-              <div class="c1-title_1">线上交订金</div>
+              <div class="c1-title_1">在线签约</div>
               <div class="c1-title_2">租房保障又安心</div>
             </div>
           </div>
           <div class="cont_1 floatl">
-            <img src="../../static/img/img04.png" alt="">
+            <img src="../../static/img/img04_1.png" alt="">
             <div class="c1-title">
-              <div class="c1-title_1">在线签约</div>
-              <div class="c1-title_2">线上完成签合同</div>
+              <div class="c1-title_1">线上交定金</div>
+              <div class="c1-title_2">资金安全无顾虑</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--直播看房-->
+    <div class="list3 list14">
+      <div class="wrap">
+        <div class="title">
+          <div class="title_1">直播看房</div>
+          <div class="title_2">随时随地把房看 </div>
+        </div>
+        <div class="wrap-cont clearfloat">
+          <div class="cont_1 floatl">
+            <img src="../../static/img/img42.png" alt="">
+            <div class="c1-title">
+              <div class="c1-title_1">直播看房</div>
+              <div class="c1-title_2">在家也能把房看</div>
+            </div>
+          </div>
+          <div class="cont_1 cont_2 floatl">
+            <img src="../../static/img/img43.png" alt="">
+            <div class="c1-title c1-title1">
+              <div class="videoPlay" @click="videoStatus = true">
+                <img src="../../static/img/icon26.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="cont_1 cont_2 floatl">
+            <img src="../../static/img/img44.png" alt="">
+            <div class="c1-title">
+              <div class="videoPlay" @click="videoStatus = true">
+                <img src="../../static/img/icon26.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="cont_1 cont_2 floatl">
+            <img src="../../static/img/img45.png" alt="">
+            <div class="c1-title">
+              <div class="videoPlay" @click="videoStatus = true">
+                <img src="../../static/img/icon26.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--热门房源-->
+    <div class="list9">
+      <div class="wrap">
+        <div class="title clearfloat">
+          <div class="floatl">
+            <div class="title_1">热门物业</div>
+            <div class="title_2">优质物业  品质生活</div>
+          </div>
+          <div class="title_3 floatr">
+            <button class="but_4">再换一批</button>
+          </div>
+        </div>
+        <div class="wrap-cont clearfloat">
+          <div class="wc-left floatl">
+            <div class="wc_middle">
+              <div class="middle-top">
+                <div class="top_1">
+                  <img src="../../static/img/img46.png" alt="">
+                  <!--<div class="like"></div>-->
+                  <div class="recommend">
+                    <img src="../../static/img/img40.png" alt="">
+                  </div>
+                  <div class="introduce">民宿-出租</div>
+                </div>
+              </div>
+              <div class="middle-bottom clearfloat">
+                <div class="mb_list">
+                  <div class="list_img">
+                    <img src="../../static/img/img48.png" alt="">
+                    <!--<div class="like"></div>-->
+                  </div>
+                  <div class="list_cont">
+                    <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                    <div class="lc_2 price">2800元／亩</div>
+                  </div>
+                </div>
+                <div class="mb_list">
+                  <div class="list_img">
+                    <img src="../../static/img/img49.png" alt="">
+                    <!--<div class="like"></div>-->
+                  </div>
+                  <div class="list_cont">
+                    <div class="lc_1"><span class="name">清新区100亩水产养殖 出租</span><span class="area"></span>450平方</div>
+                    <div class="lc_2 price">2800元／亩</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wc-right floatr">
+            <div class="wc_middle">
+              <div class="middle-top">
+                <div class="top_1">
+                  <img src="../../static/img/img47.png" alt="">
+                  <!--<div class="like sel"></div>-->
+                  <div class="introduce">别墅-出售</div>
+                  <div class="recommend">
+                    <img src="../../static/img/img40.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="middle-bottom clearfloat">
+                <div class="mb_list">
+                  <div class="list_img">
+                    <img src="../../static/img/img50.png" alt="">
+                    <!--<div class="like"></div>-->
+                  </div>
+                  <div class="list_cont">
+                    <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                    <div class="lc_2 price">2800元／亩</div>
+                  </div>
+                </div>
+                <div class="mb_list">
+                  <div class="list_img">
+                    <img src="../../static/img/img51.png" alt="">
+                    <!--<div class="like"></div>-->
+                  </div>
+                  <div class="list_cont">
+                    <div class="lc_1"><span class="name">清新区100亩水产养殖 出租</span><span class="area"></span>450平方</div>
+                    <div class="lc_2 price">2800元／亩</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -157,498 +326,549 @@
         </div>
         <div class="wrap-cont clearfloat">
           <div class="wc_1 floatl">
-            <img src="../../static/img/img05.png" alt="">
-            <div class="title-wrap">
-              <div class="tw_1">北部万科城</div>
-              <div class="tw_2">核心商圈</div>
-              <div class="tw_3">100万元起</div>
+            <img src="../../static/img/img52.png" alt="">
+            <!--<div class="title-wrap">-->
+              <!--<div class="tw_1">北部万科城</div>-->
+              <!--<div class="tw_2">核心商圈</div>-->
+              <!--<div class="tw_3">100万元起</div>-->
+            <!--</div>-->
+            <div class="infoWrap">
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>区域：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全清远</span>
+                  <span v-for="(item,index) in areatags" :key="index">{{item}}</span>
+                </div>
+              </div>
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>特色：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全部</span>
+                  <span v-for="(item,index) in shopTags" :key="index">{{item}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="infoWrap1">
+              <div class="infoTitle1">热门商铺</div>
+              <div class="infoTitle2">最火生意，快抢先一步</div>
+              <div class="infoTitle3"><img src="../../static/img/icon27.png" alt=""></div>
             </div>
           </div>
           <div class="wc_2 floatr clearfloat">
-            <div class="wc2_1">
-              <img src="../../static/img/img06.png" alt="">
-              <div class="detail">
-                <div>
-                  <div class="detail-1">时代广场</div>
-                  <div class="detail-2">
-                    <div class="d2-1">区域：清城区</div>
-                    <div class="d2-1">均价：10万元/m2</div>
-                    <div class="d2-3">核心商圈</div>
-                  </div>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img48.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-            <div class="wc2_1 wc2_1_1">
-              <img src="../../static/img/img07.png" alt="">
-              <div class="detail">
-                <div>
-                  <div class="detail-1">时代广场</div>
-                  <div class="detail-2">
-                    <div class="d2-1">区域：清城区</div>
-                    <div class="d2-1">均价：10万元/m2</div>
-                    <div class="d2-3">核心商圈</div>
-                  </div>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img53.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-            <div class="wc2_2">
-              <img src="../../static/img/img08.png" alt="">
-              <div class="detail">
-                <div>
-                  <div class="detail-1">富力盈凯广场</div>
-                  <div class="detail-2">
-                    <div class="d2-1">区域：清城区</div>
-                    <div class="d2-1">均价：10万元/m2</div>
-                    <div class="d2-3">核心商圈</div>
-                  </div>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img54.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-            <div class="wc2_3">
-              <div>
-                <div class="wc2_3_1">
-                  <span>热门商铺</span><span class="icon"></span>
-                </div>
-                <div  class="wc2_3_2">最火生意，快抢先一步</div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img55.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--写字楼-->
-    <div class="list5">
-      <div class="wrap">
-        <div class="title clearfloat">
-          <div class="floatl">
-            <div class="title_1">写字楼</div>
-            <div class="title_2">高性价  高格调  与大咖公司为邻</div>
-          </div>
-          <div class="title_3 floatr">
-            <button class="but_1 sel">出售</button>
-            <button class="but_1">出租</button>
-            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多写字楼>></button>
-          </div>
-        </div>
-        <div class="wrap-cont clearfloat">
-          <div class="wc_1">
-            <div class="swiper-container swiper03">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div>
-                    <img src="../../static/img/img09.png" alt="">
-                    <div class="imgDetail">
-                      <div>
-                        <div class="detail-title">北江明珠 新城【清城区】</div>
-                        <div class="detail-wrap">
-                          <div class="dw_1">区域：清城区</div>
-                          <div class="dw_2">均价：250元/m2</div>
-                          <div class="dw_3">核心商圈 / 贸易中心</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div>
-                    <img src="../../static/img/img10.png" alt="">
-                    <div class="imgDetail">
-                      <div>
-                        <div class="detail-title">北江明珠 新城【清城区】</div>
-                        <div class="detail-wrap">
-                          <div class="dw_1">区域：清城区</div>
-                          <div class="dw_2">均价：250元/m2</div>
-                          <div class="dw_3">核心商圈 / 贸易中心</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div>
-                    <img src="../../static/img/img11.png" alt="">
-                    <div class="imgDetail">
-                      <div>
-                        <div class="detail-title">北江明珠 新城【清城区】</div>
-                        <div class="detail-wrap">
-                          <div class="dw_1">区域：清城区</div>
-                          <div class="dw_2">均价：250元/m2</div>
-                          <div class="dw_3">核心商圈 / 贸易中心</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div>
-                    <img src="../../static/img/img11.png" alt="">
-                    <div class="imgDetail">
-                      <div>
-                        <div class="detail-title">北江明珠 新城【清城区】</div>
-                        <div class="detail-wrap">
-                          <div class="dw_1">区域：清城区</div>
-                          <div class="dw_2">均价：250元/m2</div>
-                          <div class="dw_3">核心商圈 / 贸易中心</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img54.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-            <div class="swiper-button-prev" @click="prev(3)"></div>
-            <div class="swiper-button-next" @click="next(3)"></div>
-          </div>
-          <div class="wc_2 clearfloat">
-            <div class="wc2_1 floatl">
-              <img src="../../static/img/img12.png" alt="">
-              <div class="wc2_detail1">
-                <div>
-                  <div class="w2d_1">核心商圈</div>
-                  <div class="w2d_2">享优质配套  与大咖公司为邻</div>
-                  <div class="w2d_3">150元/m2起</div>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img53.png" alt="">
+                <!--<div class="like"></div>-->
               </div>
-            </div>
-            <div class="wc2_2 floatr">
-              <img src="../../static/img/img13.png" alt="">
-              <div class="wc2_detail2">
-                <div>
-                  <div class="w2d_1">共享办公</div>
-                  <div class="w2d_2">节约开支  开启共享办公之旅</div>
-                  <div class="w2d_4"></div>
-                </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!--厂房车位-->
-    <div class="list6">
+    <!--闲置土地-->
+    <div class="list4" style="background-color: #fff;">
       <div class="wrap">
         <div class="title clearfloat">
           <div class="floatl">
-            <div class="title_1">厂房车位</div>
-            <div class="title_2">优势区位  创业孵化</div>
-          </div>
-          <div class="title_3 floatr">
-            <button class="but_1 sel">出售</button>
-            <button class="but_1">出租</button>
-            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多厂房车位>></button>
-          </div>
-        </div>
-        <div class="wrap-cont clearfloat">
-          <div class="wc_left floatl">
-            <img src="../../static/img/img14.png" alt="">
-            <div class="detail_1">
-              <div>
-                <div class="d1">清新区</div>
-                <div class="d2">
-                  <p>1000个优质车位出租</p>
-                </div>
-                <div class="d3"></div>
-              </div>
-            </div>
-          </div>
-          <div class="wc_middle floatl">
-            <div class="middle-top">
-              <div class="top_1">
-                <img src="../../static/img/img15.png" alt="">
-                <div class="like"></div>
-              </div>
-              <div class="top_2 clearfloat">
-                <span class="name floatl">清远阳山七拱镇厂房</span><span class="area floatl">980平方</span><span class="price floatr">20000元/月</span>
-              </div>
-            </div>
-            <div class="middle-bottom clearfloat">
-              <div class="mb_list">
-                <div class="list_img">
-                  <img src="../../static/img/img17.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="list_cont">
-                  <div class="lc_1"><span class="name">清城区高新科技产业园车位</span><span class="area"></span></div>
-                  <div class="lc_2 price">500元/月</div>
-                </div>
-              </div>
-              <div class="mb_list">
-                <div class="list_img">
-                  <img src="../../static/img/img18.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="list_cont">
-                  <div class="lc_1"><span class="name">清城区高新科技产业园车位</span><span class="area"></span>450平方</div>
-                  <div class="lc_2 price">12000元/月</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wc_right floatr">
-            <img src="../../static/img/img16.png" alt="">
-            <div class="detail_1">
-              <div class="title-wrap">
-                <div class="tw_1">英德大工业区</div>
-                <div class="tw_2">优势区位，创业孵化基地</div>
-                <div class="tw_3">厂房8000元起租 >></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--土地-->
-    <div class="list6 list7 bj01">
-      <div class="wrap">
-        <div class="title clearfloat">
-          <div class="floatl">
-            <div class="title_1">土地</div>
+            <div class="title_1">闲置土地</div>
             <div class="title_2">优质土地  聚你所需</div>
           </div>
           <div class="title_3 floatr">
-            <button class="but_1 sel">出租</button>
+
+            <button class="but_1">出租</button>
             <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多土地>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
-          <div class="wc_right floatl">
-            <img src="../../static/img/img19.png" alt="">
-            <div class="detail_1">
-              <div class="title-wrap">
-                <div class="tw_1">阳山县工业区</div>
-                <div class="tw_2">优势区位，创业孵化基地</div>
-                <div class="tw_3">500亩工业用地 >></div>
+          <div class="wc_1 floatl">
+            <img src="../../static/img/img56.png" alt="">
+            <!--<div class="title-wrap">-->
+            <!--<div class="tw_1">北部万科城</div>-->
+            <!--<div class="tw_2">核心商圈</div>-->
+            <!--<div class="tw_3">100万元起</div>-->
+            <!--</div>-->
+            <div class="infoWrap">
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>区域：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全清远</span>
+                  <span v-for="(item,index) in areatags" :key="index">{{item}}</span>
+                </div>
               </div>
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>特色：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全部</span>
+                  <span v-for="(item,index) in soilTags" :key="index">{{item}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="infoWrap1">
+              <div class="infoTitle1">创业孵化基地</div>
+              <div class="infoTitle2">优势区位，为你所需</div>
+              <div class="infoTitle3"><img src="../../static/img/icon27.png" alt=""></div>
             </div>
           </div>
-          <div class="wc_middle floatl">
-            <div class="middle-top">
-              <div class="top_1">
-                <img src="../../static/img/img21.png" alt="">
-                <div class="like"></div>
+          <div class="wc_2 floatr clearfloat">
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img60.png" alt="">
+                <!--<div class="like"></div>-->
               </div>
-              <div class="top_2 clearfloat">
-                <span class="name floatl">英德区222亩水果茶桑地 出租</span><span class="area floatl"></span><span class="price floatr">2800元／亩</span>
-              </div>
-            </div>
-            <div class="middle-bottom clearfloat">
-              <div class="mb_list">
-                <div class="list_img">
-                  <img src="../../static/img/img22.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="list_cont">
-                  <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
-                  <div class="lc_2 price">2800元／亩</div>
-                </div>
-              </div>
-              <div class="mb_list">
-                <div class="list_img">
-                  <img src="../../static/img/img23.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="list_cont">
-                  <div class="lc_1"><span class="name">清新区100亩水产养殖 出租</span><span class="area"></span>450平方</div>
-                  <div class="lc_2 price">2800元／亩</div>
-                </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-          </div>
-          <div class="wc_left floatr">
-            <img src="../../static/img/img20.png" alt="">
-            <div class="detail_1">
-              <div>
-                <div class="d1">清新区</div>
-                <div class="d2">
-                  <p>200亩优质土地出租</p>
-                </div>
-                <div class="d3"></div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img61.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--楼房-->
-    <div class="list8">
-      <div class="wrap">
-        <div class="title clearfloat">
-          <div class="floatl">
-            <div class="title_1">楼房</div>
-            <div class="title_2">优质房源  品质生活</div>
-          </div>
-          <div class="title_3 floatr">
-            <button class="but_1 sel">新房</button>
-            <button class="but_1">二手房</button>
-            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多楼房>></button>
-          </div>
-        </div>
-        <div class="wrap-cont clearfloat">
-          <div class="wc1 floatl">
-            <div class="wc-title clearfloat">
-              <span class="title1 floatl">优质楼盘</span><span class="title2 floatr" @click="$router.push('/productCenter/productDetail')">更多楼盘推荐</span>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img62.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
             </div>
-            <div class="wc-swiper">
-              <div class="swiper-container swiper04">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="slide-img">
-                      <img src="../../static/img/img24.png" alt="">
-                      <div class="like"></div>
-                    </div>
-                    <div class="slide-info">
-                      <div class="info-title">天域半岛花园</div>
-                      <div class="info-cont">
-                        <div class="cont-1">区域： 丛郊区</div>
-                        <div class="cont-2">均价： 17000元/平方</div>
-                        <div class="cont-3">花园洋房/生态宜居</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="slide-img">
-                      <img src="../../static/img/img24.png" alt="">
-                      <div class="like"></div>
-                    </div>
-                    <div class="slide-info">
-                      <div class="info-title">天域半岛花园</div>
-                      <div class="info-cont">
-                        <div class="cont-1">区域： 丛郊区</div>
-                        <div class="cont-2">均价： 17000元/平方</div>
-                        <div class="cont-3">花园洋房/生态宜居</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img63.png" alt="">
+                <!--<div class="like"></div>-->
               </div>
-              <div class="pagin04"></div>
-              <!--禁止点击样式swiper-button-prev-disabled  swiper-button-next-disabled-->
-              <div class="swiper-button-prev" @click="prev(4)"></div>
-              <div class="swiper-button-next" @click="next(4)"></div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
             </div>
-          </div>
-          <div class="wc2 floatr">
-            <div class="wc-title clearfloat">
-              <span class="title1 floatl">小区推荐</span><span class="title2 floatr" @click="$router.push('/productCenter/productDetail')">更多小区推荐</span>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img64.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
             </div>
-            <div class="wc-cont clearfloat">
-              <div class="cont-list">
-                <div class="cl1">
-                  <img src="../../static/img/img25.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="cl2 clearfloat">
-                  <span class="name floatl">清城 · 骏景花园</span><span class="floatr num">8000元/m2</span>
-                </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img65.png" alt="">
+                <!--<div class="like"></div>-->
               </div>
-              <div class="cont-list">
-                <div class="cl1">
-                  <img src="../../static/img/img25.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="cl2 clearfloat">
-                  <span class="name floatl">清城 · 骏景花园</span><span class="floatr num">8000元/m2</span>
-                </div>
-              </div>
-              <div class="cont-list">
-                <div class="cl1">
-                  <img src="../../static/img/img25.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="cl2 clearfloat">
-                  <span class="name floatl">清城 · 骏景花园</span><span class="floatr num">8000元/m2</span>
-                </div>
-              </div>
-              <div class="cont-list">
-                <div class="cl1">
-                  <img src="../../static/img/img25.png" alt="">
-                  <div class="like"></div>
-                </div>
-                <div class="cl2 clearfloat">
-                  <span class="name floatl">清城 · 骏景花园</span><span class="floatr num">8000元/m2</span>
-                </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!--热门房源-->
-    <div class="list9">
+    <!--办公室-->
+    <div class="list4">
       <div class="wrap">
         <div class="title clearfloat">
           <div class="floatl">
-            <div class="title_1">热门房源</div>
-            <div class="title_2">优质房源  品质生活</div>
+            <div class="title_1">办公室</div>
+            <div class="title_2">优质配套 共享办公</div>
           </div>
           <div class="title_3 floatr">
-            <button class="but_4">再换一批</button>
+            <button class="but_1 sel">出售</button>
+            <button class="but_1">出租</button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多办公室>></button>
           </div>
         </div>
         <div class="wrap-cont clearfloat">
-          <div class="wc-left floatl">
-            <div class="wc_middle">
-              <div class="middle-top">
-                <div class="top_1">
-                  <img src="../../static/img/img21.png" alt="">
-                  <div class="like"></div>
-                  <div class="introduce">小区-出租</div>
+          <div class="wc_1 floatl">
+            <img src="../../static/img/img57.png" alt="">
+            <!--<div class="title-wrap">-->
+            <!--<div class="tw_1">北部万科城</div>-->
+            <!--<div class="tw_2">核心商圈</div>-->
+            <!--<div class="tw_3">100万元起</div>-->
+            <!--</div>-->
+            <div class="infoWrap">
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>区域：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全清远</span>
+                  <span v-for="(item,index) in areatags" :key="index">{{item}}</span>
                 </div>
               </div>
-              <div class="middle-bottom clearfloat">
-                <div class="mb_list">
-                  <div class="list_img">
-                    <img src="../../static/img/img22.png" alt="">
-                    <div class="like"></div>
-                  </div>
-                  <div class="list_cont">
-                    <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
-                    <div class="lc_2 price">2800元／亩</div>
-                  </div>
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>特色：</span>
                 </div>
-                <div class="mb_list">
-                  <div class="list_img">
-                    <img src="../../static/img/img23.png" alt="">
-                    <div class="like"></div>
-                  </div>
-                  <div class="list_cont">
-                    <div class="lc_1"><span class="name">清新区100亩水产养殖 出租</span><span class="area"></span>450平方</div>
-                    <div class="lc_2 price">2800元／亩</div>
-                  </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全部</span>
+                  <span v-for="(item,index) in officeTags" :key="index">{{item}}</span>
                 </div>
               </div>
             </div>
+            <div class="infoWrap1">
+              <div class="infoTitle1">核心商圈</div>
+              <div class="infoTitle2">优质配套，与大咖公司为邻</div>
+              <div class="infoTitle3"><img src="../../static/img/icon27.png" alt=""></div>
+            </div>
           </div>
-          <div class="wc-right floatr">
-            <div class="wc_middle">
-              <div class="middle-top">
-                <div class="top_1">
-                  <img src="../../static/img/img21.png" alt="">
-                  <div class="like sel"></div>
-                  <div class="introduce">新盘-出售</div>
+          <div class="wc_2 floatr clearfloat">
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img48.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img53.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img54.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img55.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img54.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img53.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--美丽乡村-->
+    <div class="list4" style="background-color: #fff;">
+      <div class="wrap">
+        <div class="title clearfloat">
+          <div class="floatl">
+            <div class="title_1">美丽乡村</div>
+            <div class="title_2">优势区位  品质生活</div>
+          </div>
+          <div class="title_3 floatr">
+            <button class="but_1 sel">出售</button>
+            <button class="but_1">出租</button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多乡村物业>></button>
+          </div>
+        </div>
+        <div class="wrap-cont clearfloat">
+          <div class="wc_1 floatl">
+            <img src="../../static/img/img58.png" alt="">
+            <!--<div class="title-wrap">-->
+            <!--<div class="tw_1">北部万科城</div>-->
+            <!--<div class="tw_2">核心商圈</div>-->
+            <!--<div class="tw_3">100万元起</div>-->
+            <!--</div>-->
+            <div class="infoWrap">
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>区域：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全清远</span>
+                  <span v-for="(item,index) in areatags" :key="index">{{item}}</span>
                 </div>
               </div>
-              <div class="middle-bottom clearfloat">
-                <div class="mb_list">
-                  <div class="list_img">
-                    <img src="../../static/img/img22.png" alt="">
-                    <div class="like"></div>
-                  </div>
-                  <div class="list_cont">
-                    <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
-                    <div class="lc_2 price">2800元／亩</div>
-                  </div>
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>特色：</span>
                 </div>
-                <div class="mb_list">
-                  <div class="list_img">
-                    <img src="../../static/img/img23.png" alt="">
-                    <div class="like"></div>
-                  </div>
-                  <div class="list_cont">
-                    <div class="lc_1"><span class="name">清新区100亩水产养殖 出租</span><span class="area"></span>450平方</div>
-                    <div class="lc_2 price">2800元／亩</div>
-                  </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全部</span>
+                  <span v-for="(item,index) in villageTags" :key="index">{{item}}</span>
                 </div>
+              </div>
+            </div>
+            <div class="infoWrap1">
+              <div class="infoTitle1">无民宿，不欢畅</div>
+              <div class="infoTitle2">体验清远乡村特色生活</div>
+              <div class="infoTitle3"><img src="../../static/img/icon27.png" alt=""></div>
+            </div>
+          </div>
+          <div class="wc_2 floatr clearfloat">
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img60.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img61.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img62.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img63.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img64.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img65.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont list_cont1">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--仓房车位-->
+    <div class="list4">
+      <div class="wrap">
+        <div class="title clearfloat">
+          <div class="floatl">
+            <div class="title_1">仓房车位</div>
+            <div class="title_2">优势区位 创业孵化</div>
+          </div>
+          <div class="title_3 floatr">
+            <button class="but_1 sel">出售</button>
+            <button class="but_1">出租</button>
+            <button class="but_3" @click="$router.push('/productCenter/productDetail')">更多商铺>></button>
+          </div>
+        </div>
+        <div class="wrap-cont clearfloat">
+          <div class="wc_1 floatl">
+            <img src="../../static/img/img59.png" alt="">
+            <!--<div class="title-wrap">-->
+            <!--<div class="tw_1">北部万科城</div>-->
+            <!--<div class="tw_2">核心商圈</div>-->
+            <!--<div class="tw_3">100万元起</div>-->
+            <!--</div>-->
+            <div class="infoWrap">
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>区域：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全清远</span>
+                  <span v-for="(item,index) in areatags" :key="index">{{item}}</span>
+                </div>
+              </div>
+              <div class="tagsWrap clearfloat">
+                <div class="tw_left floatl">
+                  <span>特色：</span>
+                </div>
+                <div class="tw_right floatl clearfloat">
+                  <span>全部</span>
+                  <span v-for="(item,index) in storehouseTags" :key="index">{{item}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="infoWrap1">
+              <div class="infoTitle1">热门商铺</div>
+              <div class="infoTitle2">最火生意，快抢先一步</div>
+              <div class="infoTitle3"><img src="../../static/img/icon27.png" alt=""></div>
+            </div>
+          </div>
+          <div class="wc_2 floatr clearfloat">
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img48.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img53.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img54.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img55.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img54.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
+              </div>
+            </div>
+            <div class="mb_list">
+              <div class="list_img">
+                <img src="../../static/img/img53.png" alt="">
+                <!--<div class="like"></div>-->
+              </div>
+              <div class="list_cont">
+                <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
+                <div class="lc_2 price">2800元／亩</div>
               </div>
             </div>
           </div>
@@ -672,6 +892,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -682,6 +903,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -692,6 +914,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -702,6 +925,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -712,6 +936,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -722,6 +947,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -732,6 +958,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -742,6 +969,7 @@
             <div class="list_img">
               <img src="../../static/img/img22.png" alt="">
               <div class="like"></div>
+              <div class="tagInfo">厂区-出租</div>
             </div>
             <div class="list_cont">
               <div class="lc_1"><span class="name">清新区300亩工业用地 出租</span><span class="area"></span></div>
@@ -759,11 +987,14 @@
             <div class="title_1">资讯中心</div>
             <div class="title_2">热门新闻  房产资讯</div>
           </div>
+          <div class="tab floatr">
+            <button @click="tabBtn(index)" :class="{sel:tabIdx == index}" class="tab_1" v-for="(item,index) in tabList" :key="index">{{item}}</button>
+          </div>
         </div>
         <div class="wrap-cont">
           <div class="list11-top clearfloat">
             <div class="top-left floatl">
-              <div class="swiper-container swiper05">
+              <div class="swiper-container swiper05 swiper-no-swiping">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide" v-for="(item,index) in newList" :key="index">
                     <img src="../../static/img/img28.png" alt="">
@@ -775,9 +1006,6 @@
               </div>
             </div>
             <div class="top-right floatl">
-              <div class="tab">
-                <button @click="tabBtn(index)" :class="{sel:tabIdx == index}" class="tab_1" v-for="(item,index) in tabList" :key="index">{{item}}</button>
-              </div>
               <div class="right-cont">
                 <ul>
                   <li :class="{sel:newListIdx == index}" class="clearfloat" v-for="(item,index) in newList" :key="index">
@@ -787,45 +1015,6 @@
               </div>
               <div class="more">
                 <button >更多资讯</button>
-              </div>
-            </div>
-          </div>
-          <div class="list11-bottom clearfloat">
-            <div class="bottom-left floatl">
-              <div class="bottom-title clearfloat">
-                <span class="title1 floatl">房产百科</span><span class="all floatr">查看全部>></span>
-              </div>
-              <div class="bottom-wrap">
-                <div class="wrap-title">楼市调控重心将移至三四线城市</div>
-                <div class="wrap-list">
-                  <ul class="wl1">
-                    <li class="clearfloat" v-for="(item,index) in houseList" :key="index">
-                      <div class="li-cont floatl">{{item.title}}</div>
-                      <div class="li-time floatr">{{item.time}}</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="bottom-right floatr">
-              <div class="bottom-title clearfloat">
-                <span class="title1 floatl">业主论坛</span><span class="all floatr">查看全部>></span>
-              </div>
-              <div class="bottom-wrap">
-                <div class="wrap-list">
-                  <ul>
-                    <li class="ul-title clearfloat">
-                      <div class="li-title floatl">标题</div>
-                      <div class="li-author floatl">作者</div>
-                      <div class="li-time floatl">发布时间</div>
-                    </li>
-                    <li class="ul-cont clearfloat" v-for="(item,index) in ownerList" :key="index">
-                      <div class="li-title floatl">{{item.title}}</div>
-                      <div class="li-author floatl">{{item.author}}</div>
-                      <div class="li-time floatl">{{item.time}}</div>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
@@ -911,14 +1100,31 @@
         </li>
       </ul>
     </div>
+    <!--播放直播-->
+    <!--播放视频-->
+    <div class="videoWrap" v-if="videoStatus">
+      <div>
+        <div class="wrap">
+          <iframe height='498' allowfullscreen="true" allowtransparency="true" width='760' :src='videoPath' frameborder=0></iframe>
+          <div class="close01" @click="videoStatus = false"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+  import baiduMap from './baiduMap/baiduMap';
     export default {
       name: "homePage",
+      components:{
+        baiduMap
+      },
       data(){
         return {
+          // 播放直播状态
+          videoStatus:false,
+          videoPath:'http://player.youku.com/embed/XMzcwODE1MDE5Mg==',
           navList:[
             {name:'首页',path:'/homePage'},
             {name:'关于我们',path:'/mainWrap/aboutUs'},
@@ -926,15 +1132,32 @@
             {name:'留言建议',path:'/mainWrap/messageAdvice'},
             {name:'下载APP',path:'###'}
           ],
+          navSel:0,//导航栏选择状态
+          sorts: [{
+            value: '楼房',
+            label: '楼房'
+          }, {
+            value: '写字楼',
+            label: '写字楼'
+          }, {
+            value: '商城',
+            label: '商城'
+          }, {
+            value: '厂房',
+            label: '厂房'
+          }, {
+            value: '土地',
+            label: '土地'
+          }],
+          sort01: '',
           navList1:[
-            {name:'商铺',icon:'static/img/nav01.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
-            {name:'写字楼',icon:'static/img/nav02.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
-            {name:'厂房车位',icon:'static/img/nav03.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
+            {name:'美丽乡村',icon:'static/img/nav09.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
             {name:'闲置土地',icon:'static/img/nav04.png',url:'/productCenter',children:[]},
+            {name:'商铺',icon:'static/img/nav01.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
+            {name:'办公室',icon:'static/img/nav02.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
+            {name:'仓房车位',icon:'static/img/nav03.png',url:'/productCenter',children:[{name:'出租',url:'/productCenter'},{name:'出售',url:'/productCenter'}]},
             {name:'楼房',icon:'static/img/nav05.png',url:'/productCenter',children:[{name:'新房',url:'/productCenter'},{name:'二手房',url:'/productCenter'}]},
             {name:'租房',icon:'static/img/nav06.png',url:'/productCenter',children:[{name:'合租',url:'/productCenter'},{name:'整租',url:'/productCenter'}]},
-            {name:'竞拍',icon:'static/img/nav07.png',url:'/productCenter',children:[]},
-            {name:'地图找房',icon:'static/img/nav08.png',url:'/productCenter',children:[]},
           ],
           tabList:['企业新闻','国家政策','购房指南'],
           tabIdx:0,
@@ -944,8 +1167,25 @@
             {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
             {title:'碧桂园欢乐颂邀请你加入未来群聊”',time:'2018-06-29',url:''},
             {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
+            {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
+            {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
+            {title:'李克强：用“放管服”用“放管服”用“放管服”',time:'2018-06-29',url:''},
 
           ],
+          // 区域标签
+          areatags:['清城区','清新区','英德市','连州市','佛冈县','连南县','阳山县','连山县'],
+          // 商铺特色标签
+          shopTags:['可明火','外摆位','上水','下水','临街','其他'],
+          // 闲置土地特色标签
+          soilTags:['农用地','住宅地','商业地','工业地','其他'],
+          // 办公室特色标签
+          officeTags:['普通办公','共享办公','创意园区','其他'],
+          // 美丽乡村特色标签
+          villageTags:['民宿','度假','温泉','特色小镇','景点','其他'],
+          // 仓房车位
+          storehouseTags:['可明火','外摆位','上水','下水','临街','其他'],
+
+
           newListIdx:0,
           nav1Idx:-1,
           //房产百科
@@ -964,29 +1204,27 @@
           ],
           //服务说明
           serviceList:[
-            {icon:'',name:'品质服务',desc:'鸿基资品质好服务'},
-            {icon:'',name:'品质服务',desc:'鸿基资品质好服务'},
-            {icon:'',name:'品质服务',desc:'鸿基资品质好服务'},
-            {icon:'',name:'品质服务',desc:'鸿基资品质好服务'},
+            {icon:'static/img/icon28.png',name:'政府认证',desc:'鸿基资品质好服务'},
+            {icon:'static/img/icon29.png',name:'如实描述',desc:'鸿基资品质好服务'},
+            {icon:'static/img/icon30.png',name:'提供发票',desc:'鸿基资品质好服务'},
+            {icon:'static/img/icon31.png',name:'法律保障',desc:'鸿基资品质好服务'},
           ],
           //footer
           footerList1:[
             {name:'首页',url:'/homePage'},
-            {name:'关于我们',url:'/mainWrap/aboutUs'},
-            {name:'租赁中心',url:'/productCenter'},
-            {name:'新闻动态   ',url:'###'},
-            {name:'联系我们',url:'###'},
+            {name:'行业动态 ',url:'###'},
+            {name:'政策法规',url:'###'},
+            {name:'交易指南',url:'###'},
+            {name:'关于平台',url:'###'},
           ],
           footerList2:[
-            {name:'买新房',url:'/productCenter/productDetail'},
-            {name:'买二手房',url:'/productCenter/productDetail'},
-            {name:'整租',url:'/productCenter/productDetail'},
-            {name:'整租',url:'/productCenter/productDetail'},
-            {name:'写字楼',url:'/productCenter/productDetail'},
-            {name:'商铺',url:'/productCenter/productDetail'},
-            {name:'厂房车位',url:'/productCenter/productDetail'},
+            {name:'美丽乡村',url:'/productCenter/productDetail'},
             {name:'闲置土地',url:'/productCenter/productDetail'},
-            {name:'地图找房',url:'/productCenter/mapSearch'},
+            {name:'商铺',url:'/productCenter/productDetail'},
+            {name:'办公室',url:'/productCenter/productDetail'},
+            {name:'仓房车位',url:'/productCenter/productDetail'},
+            {name:'楼房',url:'/productCenter/productDetail'},
+            {name:'租房',url:'/productCenter/productDetail'}
           ],
           footerList3:[
             {name:'网站设置',url:'###'},
@@ -1006,7 +1244,7 @@
             {name:'在线客服',url:'###'},
             {name:'问题反馈',url:'/mainWrap/messageAdvice'}
           ],
-          show01:true,
+          show01:false,
           searchList:['楼房','写字楼','商城','厂房','土地'],
           searchClass:0,
           login:true,
@@ -1014,6 +1252,7 @@
           swiper03:null,
           swiper04:null,
           swiper05:null,
+          bannerSwiper:null,
           list2Status:false
         }
       },
@@ -1057,6 +1296,8 @@
         }
       },
       mounted:function () {
+        // 地图定位
+        this.$refs.mapWrap.search(0,'清远市','清远市政府',13);
         var _this = this;
         var l = 39;
         var defaultL = 8;
@@ -1079,6 +1320,7 @@
         _this.swiper05 = new _this.Swiper('.swiper05',{
           autoplay:3000,
           speed:1000,
+          autoplayDisableOnInteraction : false,
           onSlideChangeStart: function(swiper){
             if(swiper.activeIndex == _this.newListIdx){
                 swiper.swipeTo(0);
@@ -1086,7 +1328,13 @@
               _this.newListIdx = swiper.activeIndex;
             }
           },
-        })
+        });
+        _this.bannerSwiper = new _this.Swiper('.bannerSwiper',{
+          autoplay:4000,
+          speed:1000,
+          loop:true,
+          autoplayDisableOnInteraction : false,
+        });
         // 监听滚动条滚动
         $(window).scroll(function(event){
           if($(window).scrollTop()>1000){

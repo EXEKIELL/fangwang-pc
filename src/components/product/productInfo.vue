@@ -93,8 +93,11 @@
                     <div class="r2detail1-1 floatl">
                       租金 <span>1200</span> 元/月
                     </div>
-                    <div class="r2detail1-2 floatr">
-                      <button @click="seeStatus = true">预约看房</button>
+                    <div v-if="shopList == false" class="r2detail1-2 floatr">
+                      <button @click="shopList = !shopList"><i></i>加入购物车</button>
+                    </div>
+                    <div v-if="shopList" class="r2detail1-2 floatr r2detail1-2-1">
+                      <button @click="shopList = !shopList"><i></i>已添加</button>
                     </div>
                   </div>
                   <div class="r2-detail2">
@@ -118,13 +121,17 @@
                       <div class="r3info-1">黑脸V先生</div>
                       <div class="r3info-2">来源：经纪公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;广州恒帝信息科技有限公司</div>
                       <div class="r3info-3">
-                        <span>400-1010-2333</span><span>400-1010-2333</span>
+                        <span class="tel_1">400-1010-2333</span><span class="tel_2">400-1010-2333</span>
                       </div>
                     </div>
                     <div class="r3-com floatl">
                       <span class="icon"></span><span>沟通</span>
                     </div>
                   </div>
+                </div>
+                <div class="right-4">
+                  <button class="b_1" @click="seeStatus = true">预约看房</button>
+                  <button class="b_2">在线签约</button>
                 </div>
               </div>
             </div>
@@ -135,7 +142,7 @@
         <div class="wrap clearfloat">
           <div class="wrap-left floatl">
             <div class="tab clearfloat">
-              <div v-for="(item,index) in tabList" @click="tabSel(index)" :class="{sel:tabIdx == index}">{{item}}</div>
+              <div v-for="(item,index) in tabList" @click="tabSel(index,$event)" :class="{sel:tabIdx == index}">{{item}}</div>
             </div>
             <div class="info_1">
               <div class="info-title">
@@ -317,7 +324,7 @@
         </div>
       </div>
       <!--预约看房弹窗-->
-      <div class="see" v-if="seeStatus">
+      <div class="see" v-show="seeStatus">
         <div>
           <div class="seeWrap">
             <div class="close03" @click="seeStatus = false"></div>
@@ -476,6 +483,8 @@
           // 搜索字
           searchText:'',
           navIdx:0,
+          //加入购物车
+          shopList:false,
           //当前路径
           pathDetail:['鸿基资盈宝','厂房车位出售','厂房车位出售'],
           swiper01:null,
@@ -500,12 +509,31 @@
           daySel:-1,
         }
       },
+      watch:{
+        seeStatus:function (i) {
+          console.log(i);
+          var that = this;
+          if(i == true){
+            setTimeout(function () {
+              that.swiper02 = new that.Swiper('.swiper02',{
+                slidesPerView:2.3
+              });
+            },50);
+          }
+        }
+      },
       methods:{
         nav01:function (i, id) {
           this.navIdx = i;
         },
-        tabSel:function (i) {
+        tabSel:function (i,e) {
           this.tabIdx = i;
+          var text = $(e.target).text();
+          var top = $('.cname').eq(i).offset().top-100;
+          $('body,html').animate({
+              scrollTop: top
+            }, 500
+          );
         },
         like01:function (i) {
           if($('.info_6_detail .like').eq(i).hasClass('sel')){
@@ -557,11 +585,20 @@
         }
       },
       mounted:function () {
+        var that = this;
         this.swiper01 = new this.Swiper('.swiper01',{
           slidesPerView:4
         });
-        this.swiper02 = new this.Swiper('.swiper02',{
-          slidesPerView:2.3
+        console.log($('.cname').eq(1).text())
+        for (var i = 0; i < this.tabList.length; i++) {
+          $('.cname').eq(i).text(this.tabList[i]);
+        }
+        $(window).scroll(function(event){
+          if($(window).scrollTop()>830){
+            $('.tab').addClass('tab1');
+          }else{
+            $('.tab').removeClass('tab1');
+          }
         });
         // 地图初始化
         // this.init();

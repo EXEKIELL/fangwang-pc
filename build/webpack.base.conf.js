@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
 var webpack = require('webpack')
 
 function resolve (dir) {
@@ -88,6 +89,12 @@ module.exports = {
     new webpack.ProvidePlugin({
       jQuery: "jquery",
       $: "jquery"
-    })
+    }),
+    // new PrerenderSPAPlugin(
+    //   // 编译后的html需要存放的路径
+    //   path.join(__dirname, '../dist'),
+    //   // 列出哪些路由需要预渲染
+    //   [ '/', '/login', '/homePage','/productCenter','/mainWrap' ,'/personCenter']
+    // )
   ]
 }

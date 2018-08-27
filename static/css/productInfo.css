@@ -299,9 +299,9 @@
       font-size: 16px;
       color: #999999;
       border-bottom: 1px solid #eeeeee;
-      padding: 20px 0; }
+      padding: 10px 0; }
       #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-1 {
-        margin-bottom: 30px; }
+        margin-bottom: 12px; }
         #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-1 span {
           font-size: 60px;
           color: #00a6a0;
@@ -310,27 +310,37 @@
         position: relative;
         top: 25px; }
         #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-2 button {
-          padding: 10px 20px;
-          background-color: #fdc405;
-          color: #ffffff;
+          background-color: transparent;
+          color: #999999;
+          font-size: 16px;
           -webkit-transition: all 0.3s;
           -moz-transition: all 0.3s;
           -ms-transition: all 0.3s;
           -o-transition: all 0.3s;
           transition: all 0.3s; }
-        #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-2 button:hover {
-          -webkit-box-shadow: -1px 1px 20px rgba(253, 196, 5, 0.3);
-          -moz-box-shadow: -1px 1px 20px rgba(253, 196, 5, 0.3);
-          box-shadow: -1px 1px 20px rgba(253, 196, 5, 0.3); }
+          #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-2 button i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("../img/icon25.png") no-repeat center;
+            background-size: 100% auto;
+            position: relative;
+            top: 3px;
+            margin-right: 5px; }
+      #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-2-1 button {
+        color: #00a6a0; }
+        #productInfo .list2 .l2-info .info-right .right-2 .r2-detail1 .r2detail1-2-1 button i {
+          background: url("../img/icon25_sel.png") no-repeat center;
+          background-size: 100% auto; }
       #productInfo .list2 .l2-info .info-right .right-2 .r2-detail2, #productInfo .list2 .l2-info .info-right .right-2 .r2-detail3, #productInfo .list2 .l2-info .info-right .right-2 .r2-detail4 {
-        margin-bottom: 20px; }
+        margin-bottom: 18px; }
         #productInfo .list2 .l2-info .info-right .right-2 .r2-detail2 span, #productInfo .list2 .l2-info .info-right .right-2 .r2-detail3 span, #productInfo .list2 .l2-info .info-right .right-2 .r2-detail4 span {
           color: #555555; }
         #productInfo .list2 .l2-info .info-right .right-2 .r2-detail2 .detail-title, #productInfo .list2 .l2-info .info-right .right-2 .r2-detail3 .detail-title, #productInfo .list2 .l2-info .info-right .right-2 .r2-detail4 .detail-title {
           color: #999999;
           margin-right: 15px; }
     #productInfo .list2 .l2-info .info-right .right-3 {
-      padding: 35px 0; }
+      padding: 24px 0; }
       #productInfo .list2 .l2-info .info-right .right-3 > div .r3-img {
         width: 100px;
         height: 100px;
@@ -361,8 +371,10 @@
           font-size: 14px;
           color: #888888; }
         #productInfo .list2 .l2-info .info-right .right-3 > div .r3-info .r3info-3 {
-          font-size: 24px;
+          font-size: 22px;
           color: #00a6a0; }
+          #productInfo .list2 .l2-info .info-right .right-3 > div .r3-info .r3info-3 .tel_1 {
+            margin-right: 15px; }
       #productInfo .list2 .l2-info .info-right .right-3 > div .r3-com {
         padding: 10px 8px;
         font-size: 14px;
@@ -390,13 +402,25 @@
           top: 1px; }
       #productInfo .list2 .l2-info .info-right .right-3 > div .r3-com:hover {
         background-color: #abf3f0; }
+    #productInfo .list2 .l2-info .info-right .right-4 button {
+      line-height: 60px;
+      padding: 0 74px;
+      color: #ffffff;
+      font-size: 18px; }
+    #productInfo .list2 .l2-info .info-right .right-4 .b_1 {
+      margin-right: 20px;
+      background-color: #fdc405; }
+    #productInfo .list2 .l2-info .info-right .right-4 .b_2 {
+      padding: 0 100px;
+      background-color: #00a6a0; }
 #productInfo .list3 .wrap-left {
   width: 960px;
   margin-right: 30px; }
   #productInfo .list3 .wrap-left .tab {
     width: 100%;
     line-height: 40px;
-    border-bottom: 1px solid #00a6a0; }
+    border-bottom: 1px solid #00a6a0;
+    background-color: #fff; }
     #productInfo .list3 .wrap-left .tab > div {
       float: left;
       padding: 0 20px;
@@ -434,6 +458,12 @@
       #productInfo .list3 .wrap-left .tab > div.sel i {
         background: url("../img/p_icon02_sel.png") no-repeat center;
         background-size: 100% auto; }
+  #productInfo .list3 .wrap-left .tab1 {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 960px; }
   #productInfo .list3 .wrap-left .info-title {
     margin-top: 50px;
     margin-bottom: 35px; }
