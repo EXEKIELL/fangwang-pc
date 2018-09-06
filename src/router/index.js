@@ -266,6 +266,14 @@ export default new Router({
               }
             }
           ]
+        },
+        {
+          path: '/personCenter/personMessage',
+          name: 'PersonMessage',
+          component:() =>import('@/components/personCenter/personMessage/personMessage'),
+          meta:{
+            title:'我的消息'
+          }
         }
       ]
     },

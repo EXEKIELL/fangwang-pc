@@ -1,0 +1,38 @@
+#personMessage {
+  padding: 48px 40px; }
+  #personMessage .tab {
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 26px; }
+    #personMessage .tab span {
+      font-size: 16px;
+      color: #666666;
+      padding: 12px 44px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    #personMessage .tab span:hover {
+      color: #ffffff;
+      background-color: #00a6a0; }
+    #personMessage .tab span.sel {
+      color: #ffffff;
+      background-color: #00a6a0; }
+  #personMessage .tabWrap .system ul li {
+    padding: 20px 22px; }
+    #personMessage .tabWrap .system ul li .li_1 .type {
+      font-size: 18px;
+      color: #666666;
+      margin-bottom: 20px; }
+    #personMessage .tabWrap .system ul li .li_1 .info {
+      font-size: 14px;
+      color: #999999;
+      font-weight: lighter; }
+    #personMessage .tabWrap .system ul li .li_2 {
+      font-size: 14px;
+      color: #999999; }
+  #personMessage .tabWrap .system ul li:nth-child(2n+1) {
+    background-color: #f5f5f5; }
+
+/*# sourceMappingURL=personMessage.css.map */

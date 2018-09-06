@@ -76,7 +76,7 @@
             {name:'资金中心',url:'/personCenter/personFundCenter'},
             {name:'我的收藏',url:'/personCenter/personCollect'},
             {name:'我的足迹',url:'/personCenter/personFootPrint'},
-            {name:'我的消息',url:'###'},
+            {name:'我的消息',url:'/personCenter/personMessage'},
             {name:'我的竞拍',url:'###'},
             {name:'购物车',url:'/personCenter/personShopping'},
             {name:'我的预约',url:'/personCenter/personAppointment'},
