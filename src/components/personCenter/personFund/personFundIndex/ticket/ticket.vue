@@ -28,7 +28,9 @@
                 <div class="info_1">
                   <div class="del"></div>
                   <!--即将过期-->
-                  <div class="guoqi"></div>
+                  <div class="guoqi">
+                    <span>即将过期</span>
+                  </div>
                   <div class="i1_1">
                     <div class="i1_1_1">
                       <span class="tag">¥</span><span class="num">800<span>售券</span></span>

@@ -2,7 +2,8 @@
     <div id="login">
       <div class="loginWrap" v-if="showIndex == 0">
         <div class="list1" @click="showIndex = 2">
-          <img src="../../../static/img/loginIcon07_1.png" alt="">
+          <img src="../../../static/img/saoma.png" alt="">
+          <img class="list1_text" src="../../../static/img/saoma_icon.png" alt="">
         </div>
         <div class="inlineWrap">
           <div class="wrapNav clearfloat">
@@ -147,7 +148,8 @@
       <div class="loginWrap loginWrap2" v-if="showIndex == 2">
         <div class="inlineWrap">
           <div class="list1" @click="showIndex = 0">
-            <img src="../../../static/img/loginIcon07.png" alt="">
+            <img src="../../../static/img/computer.png" alt="">
+            <img class="list1_text" src="../../../static/img/computer_icon.png" alt="">
           </div>
           <div class="list2">
             <div class="logo">
